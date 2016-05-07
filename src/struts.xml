@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+<constant name="struts.devMode" value="true" />
+
+<package name="com.dev.actions"  namespace="/" extends="struts-default">
+    <!-- Action de l'action de rÃ©ference -->   
+     <default-action-ref name="connexion_User"/> 
+    
+    <action name="connexion_User">
+      <result>/connexion/connexion.jsp</result>
+    </action>
+    
+    <action name="login" class="com.dev.actions.LoginAction" method="execute">
+        <result name="SUCCESS" >/accueil/AccueilEleve.jsp</result>
+        <result name="INPUT">/connexion/connexion.jsp</result>  
+    </action>
+    
+     <action name="gotoMonProfil" class="com.dev.actions.RedirectionsAction"
+      method="redirectionProfil">
+    	<result name="profil">/profil/ProfilEleve.jsp</result>
+    </action>
+    
+    <action name="gotoGrilleComp" class="com.dev.actions.RedirectionsAction"
+      method="redirectionGrille">
+    	<result name="grille">/grille/Grille.jsp</result>
+    </action>
+    
+    <action name="gotoGroupe" class="com.dev.actions.RedirectionsAction"
+      method="redirectionGroupe">
+    	<result name="groupe">/groupe/Groupe.jsp</result>
+    </action>
+    
+    <action name="gotoEvaluationCroise" class="com.dev.actions.RedirectionsAction"
+      method="redirectionEvaluationCroise">
+    	<result name="evaluation">/evaluationCroise/EvaluationCroise.jsp</result>
+    </action>
+</package>   
+	<include file="com/objis/demostruts2/example.xml" />
+
+</struts>
