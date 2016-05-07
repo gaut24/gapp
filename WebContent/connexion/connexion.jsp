@@ -22,7 +22,7 @@
 		
 	
 			<s:textfield name="personnes.login" id="identifiant"
-				label="Identifiant" labelposition="left">
+				label="Identifiants" labelposition="left">
 			</s:textfield>
 			
 			
