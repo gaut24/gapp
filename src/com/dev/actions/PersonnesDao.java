@@ -20,6 +20,7 @@ public class PersonnesDao {
         query.setParameter("pass", password);
         List<Personnes> list = query.list();
         if (list.size() > 0) {
+        	System.out.println(list);
             session.close();
             return true;
         }

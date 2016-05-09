@@ -8,7 +8,7 @@
 
 <div class=" accelev col-lg-10 col-sm-10 col-md-10">
         
-         <h1>Bienvenue sur GAPP Eleve</h1>
+         <h1>Bienvenue sur GAPP Professeur</h1>
        
 </div>
 

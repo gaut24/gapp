@@ -16,8 +16,9 @@
       <result>/connexion/connexion.jsp</result>
     </action>
     
-    <action name="login" class="com.dev.actions.LoginAction" method="execute">
-        <result name="SUCCESS" >/accueil/AccueilEleve.jsp</result>
+    <action name="login" class="com.dev.actions.LoginAction" method="connexion">
+        <result name="SUCCESSeleve" >/accueil/AccueilEleve.jsp</result>
+        <result name="SUCCESSprof" >/accueil/AccueilProfesseur.jsp</result>
         <result name="INPUT">/connexion/connexion.jsp</result>  
     </action>
     
