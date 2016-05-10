@@ -11,7 +11,7 @@ html, body{
     padding-bottom:20px;
      font-family: "Comic Sans MS";
 }
-
+.css_jour_evenement span { background: none !important; background-color: #FF0000 !important; color: blue !important; }
 #formulaire{
     background-color: white;
     border: 1px solid grey;
