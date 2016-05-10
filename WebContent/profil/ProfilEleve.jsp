@@ -22,7 +22,7 @@
         	
         	<div class="col-md-4 col-md-offset-1">
         		<center>Cours</br>
-        		<div id="calendrier"></div>
+        		<div id="datepicker"></div>
         	</div>
         	</center>
         	<div class="col-md-3 col-md-offset-1">
