@@ -3,15 +3,14 @@
  */
 $(document).ready(function(){
 	
-	 $("form").on("submit", function() {
+	 $("#formulaire").on("submit", function() {
 	      if($("#identifiant").val().length == 0) {
-	        $("div.form-group1").addClass("has-error");
-	        $(".form-group1 div.alert").show("slow").delay(4000).hide("slow");
+	        $("#loginMissing").removeClass("hidden");
+	        console.log("test");
 	        return false;
 	      }
 	      if($("#password").val().length == 0 ){
-	    	$("div.form-group2").addClass("has-error");
-		    $(" .form-group2 div.alert").show("slow").delay(4000).hide("slow");
+		    $("#pswdMissing").removeClass("hidden");
 		    return false;
 	      }
 	    });

@@ -126,12 +126,9 @@ font-size: 11px;
     margin-top: 50%;
 }
 
-
-
-
-
-
-
+.alertMissing{
+	color : red;
+}
 
 .accMenu{margin-left:0px;}
 @media (min-width: 768px) {

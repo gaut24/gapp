@@ -50,8 +50,8 @@ public class LoginAction extends ActionSupport {
     Personnes personnes;
     
  
-    /*@Override
-    public void validate() {
+    @Override
+    /*public void validate() {
         if (personnes.getLogin().length() == (0)) {
             this.addFieldError("personnes.login", "Name is required");
         }
@@ -60,10 +60,6 @@ public class LoginAction extends ActionSupport {
         }
     }*/
  
-    public String connexion(){
-    	
-    	return execute();
-    }
     public String execute() {
         if (dao.find(personnes.getLogin(), personnes.getPassword())) {
         	SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();

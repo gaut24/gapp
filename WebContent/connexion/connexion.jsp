@@ -24,18 +24,17 @@
 			<s:textfield name="personnes.login" id="identifiant"
 				label="Identifiant" labelposition="left" size="20" maxlength="60">
 			</s:textfield>
-			<span class="erreur">${form.erreurs['email']}</span>
 			
 			
 			<s:password name="personnes.password" id="password"
 				label="Password" labelposition="left">
 			</s:password>
-			<span class="erreur">${form.erreurs['motdepasse']}</span>	
-			
-			<p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
-			<s:submit value = "Envoyer"></s:submit>
+			<s:submit value="Envoyer"></s:submit>
 		
 		</s:form>
+		
+		<p id="loginMissing" class="hidden alertMissing">Veuillez saisir votre identifiant</p>
+		<p id="pswdMissing" class="hidden alertMissing">Veuillez saisir votre mot de passe</p>
     
 	</div>
 	
