@@ -21,12 +21,12 @@
 		<s:form  action="login">
 		
 	
-			<s:textfield name="personnes.login" id="identifiant"
+			<s:textfield name="login" id="identifiant"
 				label="Identifiant" labelposition="left" size="20" maxlength="60">
 			</s:textfield>
 			
 			
-			<s:password name="personnes.password" id="password"
+			<s:password name="password" id="password"
 				label="Password" labelposition="left">
 			</s:password>
 			<s:submit value="Envoyer"></s:submit>
