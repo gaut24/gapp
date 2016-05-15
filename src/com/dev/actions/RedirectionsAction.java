@@ -21,4 +21,8 @@ public class RedirectionsAction {
 		  
 		    return "evaluation";
 		  }
+	 public String redirectionCompetences() {
+		  
+		    return "competences";
+		  }
 }

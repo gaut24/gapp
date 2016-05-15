@@ -42,6 +42,10 @@
       method="redirectionEvaluationCroise">
     	<result name="evaluation">/evaluationCroise/EvaluationCroise.jsp</result>
     </action>
+    <action name="gotoCompetences" class="com.dev.actions.RedirectionsAction"
+      method="redirectionCompetences">
+    	<result name="competences">/competences/gestion.jsp</result>
+    </action>
 </package>   
 	<include file="com/objis/demostruts2/example.xml" />
 
