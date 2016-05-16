@@ -7,6 +7,7 @@ import javax.servlet.ServletContextListener;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
  
+ 
 public class HibernateServletContextListener implements ServletContextListener {
  
     @Override
@@ -20,7 +21,7 @@ public class HibernateServletContextListener implements ServletContextListener {
         URL url = HibernateServletContextListener.class.getResource("/hibernate.cfg.xml");
         Configuration config = new Configuration();
         config.configure(url);
-        SessionFactory sf = new Configuration().configure().buildSessionFactory();
+        SessionFactory sf = config.buildSessionFactory();
         sce.getServletContext().setAttribute("SessionFactory", sf);
     }
  

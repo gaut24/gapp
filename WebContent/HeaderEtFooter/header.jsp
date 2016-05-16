@@ -3,7 +3,7 @@
         <div class="col-md-12">
 	        <div class="row">
 			        <div class="col-md-3 ">
-			       	     <h3>Bonjour <s:property value="identifiant"/></h3>
+			       	     <h4><s:property value="nom"></s:property> <s:property value="prenom"></s:property>, <s:property value="id_groupe"></s:property></h4>
 			       	 </div>
 			       	 <div class="col-md-2 col-md-offset-7">  
 			       	 <div class="btndeco">

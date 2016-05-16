@@ -10,14 +10,14 @@ import org.db.Personnes;
 public class PersonnesDaoImpl implements PersonnesDao {
      
     private SessionFactory sf;
-    SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory(); 
+    //SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory(); 
     public PersonnesDaoImpl(SessionFactory sf){
         this.sf = sf;
     }
  
     @Override
     public Personnes getUserByCredentials(String login, String password) {
-        Session session = sessionFactory.openSession();
+        Session session = sf.openSession();
         Transaction tx = session.beginTransaction();
         Query query = session.createQuery("from Personnes where login=:login and password=:password");
         query.setString("login", login); query.setString("password", password);
