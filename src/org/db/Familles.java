@@ -1,18 +1,20 @@
 package org.db;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Familles {
 	@Id
-	private int id_famille;
+	@GeneratedValue
+	private Long id_famille;
 	private String nom;
 	
-	public int getId_famille() {
+	public Long getId_famille() {
 		return id_famille;
 	}
-	public void setId_famille(int id_famille) {
+	public void setId_famille(Long id_famille) {
 		this.id_famille = id_famille;
 	}
 	public String getNom() {

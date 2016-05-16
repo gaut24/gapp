@@ -1,26 +1,28 @@
 package org.db;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Competences {
 	@Id
-	private int id_competence;
-	private int id_famille;
+	@GeneratedValue
+	private Long id_competence;
+	private Long id_famille;
 	private String nom;
 	private int coefficient;
 	
-	public int getId_competence() {
+	public Long getId_competence() {
 		return id_competence;
 	}
-	public void setId_competence(int id_competence) {
+	public void setId_competence(Long id_competence) {
 		this.id_competence = id_competence;
 	}
-	public int getId_famille() {
+	public Long getId_famille() {
 		return id_famille;
 	}
-	public void setId_famille(int id_famille) {
+	public void setId_famille(Long id_famille) {
 		this.id_famille = id_famille;
 	}
 	public String getNom() {
