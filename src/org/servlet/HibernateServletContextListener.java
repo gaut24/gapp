@@ -21,6 +21,8 @@ public class HibernateServletContextListener implements ServletContextListener {
         URL url = HibernateServletContextListener.class.getResource("/hibernate.cfg.xml");
         Configuration config = new Configuration();
         config.configure(url);
+        ServiceRegistryBuilder serviceRegistryBuilder = new ServiceRegistryBuilder();
+        serviceRegistryBuilder.applySettings(config.getProperties());
         SessionFactory sf = config.buildSessionFactory();
         sce.getServletContext().setAttribute("SessionFactory", sf);
     }
