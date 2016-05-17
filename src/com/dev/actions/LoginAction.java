@@ -1,18 +1,22 @@
 package com.dev.actions;
 
 
+import java.util.Map;
+
 import javax.servlet.ServletContext;
- 
+
+import org.apache.struts2.interceptor.SessionAware;
 import org.apache.struts2.util.ServletContextAware;
 import org.hibernate.SessionFactory;
  
 import com.dev.actions.*;
 import org.db.Personnes;
 import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ModelDriven;
  
-public class LoginAction implements Action, ModelDriven<Personnes>, ServletContextAware {
-     
+public class LoginAction implements Action, ModelDriven<Personnes>, ServletContextAware, SessionAware {
+	private Map<String, Object> userSession ;
     @Override
     public String execute() throws Exception {
          
@@ -26,7 +30,12 @@ public class LoginAction implements Action, ModelDriven<Personnes>, ServletConte
         	personnes.setPrenom(personnesDB.getPrenom());
             personnes.setEmail(personnesDB.getEmail());
             personnes.setDroit(personnesDB.getDroit());
-            personnes.setId_groupe(personnesDB.getId_groupe());
+            userSession.put("id", personnesDB.getId_personne());
+            userSession.put("nom", personnesDB.getNom());
+            userSession.put("prenom", personnesDB.getPrenom());
+            userSession.put("email", personnesDB.getEmail());
+            userSession.put("droit", personnesDB.getDroit());
+            userSession.put("groupe", personnesDB.getId_groupe());
             int droit = personnesDB.getDroit();
             if(droit == 1) return "SUCCESSeleve";
             else if (droit == 2) return "SUCCESSprof";
@@ -47,5 +56,11 @@ public class LoginAction implements Action, ModelDriven<Personnes>, ServletConte
     public void setServletContext(ServletContext sc) {
         this.ctx = sc;
     }
+
+	@Override
+	public void setSession(Map<String, Object> session) {
+		// TODO Auto-generated method stub
+		userSession = session;
+	}
      
 }
