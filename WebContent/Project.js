@@ -14,6 +14,22 @@ $(document).ready(function(){
 		    return false;
 	      }
 	    });
+	 
+         $("#search").autocomplete({
+         source : function(request, response) {
+                 $.ajax({
+                         url : "searchAction",
+                         type : "GET",
+                         data : {
+                                 term : request.term
+                         },
+                         dataType : "json",
+                         success : function(jsonResponse) {
+                                 response(jsonResponse.list);
+                         }
+                 });
+                 }
+         });
 	
 	
      var joursEvenement = [ [17, 05, 2016], [05, 05, 2016] ]  ;
