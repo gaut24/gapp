@@ -6,7 +6,6 @@
 <%@ include file="/HeaderEtFooter/header.jsp" %>
  <%@ include file="/Menu/menu.jsp" %>
            
-         
         
         <div class=" accelev col-sm-10 col-md-10">
         

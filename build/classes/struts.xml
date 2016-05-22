@@ -17,10 +17,10 @@
     </action>
     
     <action name="login" class="com.dev.actions.LoginAction" method="execute">
-        <result name="SUCCESSeleve" >/accueil/AccueilEleve.jsp</result>
-        <result name="SUCCESSprof" >/accueil/AccueilProfesseur.jsp</result>
-        <result name="SUCCESSadmin" >/accueil/AccueilAdmin.jsp</result>
-        <result name="INPUT">/connexion/connexion.jsp</result>  
+        <result name="SUCCESSeleve" >/profil/ProfilEleve.jsp</result>
+        <result name="SUCCESSprof" >/profil/ProfilEleve.jsp</result>
+        <result name="SUCCESSadmin" >/profil/ProfilEleve.jsp</result>
+        <result name="INPUT">/profil/ProfilEleve.jsp</result>  
     </action>
     
      <action name="gotoMonProfil" class="com.dev.actions.RedirectionsAction"
