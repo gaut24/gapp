@@ -62,3 +62,57 @@ $(document).ready(function(){
 
 
 });
+
+
+
+/* Fonction pour la barre de progression de l'export des notes */
+
+
+/*$('#barre').progressbar({
+    value : 0  // remplit 50% de la barre
+    
+    setTimeout(function(){
+        alert('Ceci est une alerte se déclenchant après 5 secondes.');
+    }, 5000);
+
+    // la fonction exécutera l'alerte après 5 secondes
+
+function rafraichir(){
+    var progress = $('#barre').progressbar('option', 'value'); // récupération de la valeur actuelle
+
+    if(progress < 100){
+        $('#barre').progressbar('option', 'value', progress + 1); // on incrémente la valeur de 1 si elle est strictement inférieure à 100
+	setTimeout(rafraichir, 50); // puis on relance la fonction
+    }
+}
+
+var inputElement = $('#file');
+
+inputElement.change(function(){
+    var files = inputElement.attr('files');
+    var file = files[0];
+    var xhr = new XMLHttpRequest();
+
+    $('#barre').progressbar({ value: 0 }); // on initialise le plugin
+				
+    xhr.open('POST', 'upload.php');
+
+    xhr.onprogress = function(e){
+	var loaded = Math.round((e.loaded / e.total) * 100); // on calcul le pourcentage de progression
+	$('#barre').progressbar('value', loaded);
+    }
+    xhr.onload = function(){
+	$('#barre').progressbar('value', 100);
+    }
+				
+    var form = new FormData();
+    form.append('file', inputElement.file);
+
+    xhr.send(form);
+});
+});*/
+
+$('#barre').progressbar();
+$('#barre').progressbar({
+    value : 50 // remplit 50% (la moitié) de la barre
+});
