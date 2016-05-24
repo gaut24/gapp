@@ -8,7 +8,7 @@
 	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
 <constant name="struts.devMode" value="true" />
 
-<package name="com.dev.actions"  namespace="/" extends="struts-default">
+<package name="com.dev.actions"  namespace="/" extends="struts-default json-default">
     <!-- Action de l'action de rÃ©ference -->   
      <default-action-ref name="connexion_User"/> 
     
@@ -23,7 +23,7 @@
         <result name="INPUT">/connexion/connexion.jsp</result>  
     </action>
     
-     <action name="gotoMonProfil" class="com.dev.actions.RedirectionsAction"
+    <action name="gotoMonProfil" class="com.dev.actions.RedirectionsAction"
       method="redirectionProfil">
     	<result name="profil">/profil/ProfilEleve.jsp</result>
     </action>
@@ -37,14 +37,18 @@
       method="redirectionGroupe">
     	<result name="groupe">/groupe/Groupe.jsp</result>
     </action>
-    
     <action name="gotoEvaluationCroise" class="com.dev.actions.RedirectionsAction"
       method="redirectionEvaluationCroise">
     	<result name="evaluation">/evaluationCroise/EvaluationCroise.jsp</result>
     </action>
-    <action name="gotoCompetences" class="com.dev.actions.FamilleAction">
-    	<result name="success">/competences/gestion.jsp</result>
+    <action name="gotoCompetences" class="com.dev.actions.RedirectionsAction" method="redirectionCompetences">
+    	<result name="competences">/competences/gestion.jsp</result>
     </action>
+    <action name="gotoRecherche" class="com.dev.actions.RedirectionsAction" method="redirectionRecherche">
+    	<result name="recherche">/rechercherEleve/rechercherEleve.jsp</result>
+    </action>
+    
+    
     <action name="addFamille" class="com.dev.actions.FamilleAction" method="add">
             <result name="success">/competences/gestion.jsp</result>
         </action>
@@ -54,7 +58,8 @@
     <action name="addCompetences" class="com.dev.actions.CompetenceAction" method="add">
             <result name="success">/competences/gestion.jsp</result>
     </action>
-</package>   
+</package>
+
 	<include file="com/objis/demostruts2/example.xml" />
 
 </struts>

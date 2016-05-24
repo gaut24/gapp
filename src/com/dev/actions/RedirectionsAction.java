@@ -25,4 +25,8 @@ public class RedirectionsAction {
 		  
 		    return "competences";
 		  }
+	 public String redirectionRecherche() {
+		  
+		    return "recherche";
+		  }
 }
