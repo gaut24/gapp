@@ -41,11 +41,11 @@
       method="redirectionEvaluationCroise">
     	<result name="evaluation">/evaluationCroise/EvaluationCroise.jsp</result>
     </action>
-    <action name="gotoCompetences" class="com.dev.actions.FamilleAction">
-    	<result name="success">/competences/gestion.jsp</result>
+    <action name="gotoCompetences" class="com.dev.actions.RedirectionsAction" method="redirectionCompetences">
+    	<result name="competences">/competences/gestion.jsp</result>
     </action>
-    <action name="gotoRecherche" class="com.dev.actions.RechercheAction">
-    	<result type="json">/rechercherEleve/rechercherEleve.jsp</result>
+    <action name="gotoRecherche" class="com.dev.actions.RedirectionsAction" method="redirectionRecherche">
+    	<result name="recherche">/rechercherEleve/rechercherEleve.jsp</result>
     </action>
     
     
