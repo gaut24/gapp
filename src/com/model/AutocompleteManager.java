@@ -15,9 +15,10 @@ public class AutocompleteManager {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         List<String> personnes = null;
+        List<String> personnesPren = null;
         try {
              
-            personnes = (List<String>)session.createQuery("select nom,prenom from Personnes where droit=1").list();
+            personnes = (List<String>)session.createQuery("select nom, prenom from Personnes where droit=1").list();
             
              
         } catch (HibernateException e) {
