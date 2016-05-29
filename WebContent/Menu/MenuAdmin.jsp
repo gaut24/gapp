@@ -3,12 +3,12 @@
    
      <nav>
      
-     <s:url id="" action="" />
-     <s:url id="" action="" />
+     <s:url id="urlFicheEleve" action="gotoFicheEleve" />
+     <s:url id="urlExportNotes" action="gotoExportNotes" />
      
 		<ul class="list-unstyled">
-             <li><s:a href="">Fiche Eleve</s:a></li>
-             <li><s:a href="">Export Notes</s:a></li>
+             <li><s:a href="%{urlFicheEleve}">Fiche Eleve</s:a></li>
+             <li><s:a href="%{urlExportNotes}">Export Notes</s:a></li>
 		</ul>
 	
 	</nav>

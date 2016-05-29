@@ -12,15 +12,9 @@
 		<div class=" accelev col-lg-10 col-sm-10 col-md-10">
 
 			<h1>Bienvenue sur GAPP Admin</h1>
-
-		</div>
-
-		<div class=" accelev col-lg-10 col-sm-10 col-md-10">
-
-			<h1>Exporter les Notes</h1>
+			<h2>Exporter les Notes</h2>
 			<s:submit value="Exporter"></s:submit>
 			<input type="file" id="file" />
-
 		</div>
 
 		<%@ include file="/HeaderEtFooter/footer.jsp"%>

@@ -7,7 +7,6 @@ public class RedirectionsAction {
 		    return "profil";
 		  }
 	 
-	 
 	 public String redirectionGrille() {
 		 
 		    return "grille";
@@ -28,5 +27,13 @@ public class RedirectionsAction {
 	 public String redirectionRecherche() {
 		  
 		    return "recherche";
+		  }
+	 public String redirectionFicheEleve() {
+		  
+		    return "ficheEleve";
+		  }
+	 public String redirectionExportNotes() {
+		  
+		    return "exportNotes";
 		  }
 }

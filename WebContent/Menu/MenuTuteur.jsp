@@ -3,11 +3,10 @@
    
     	<nav>
             
-    <s:url id="" action="" />
+    <s:url id="urlRecherche" action="gotoRecherche" />
     
         <ul class="list-unstyled">
-             <li><s:a href="">Recherche</s:a></li>
-             
+             <li><s:a href="%{urlRecherche}">Rechercher un élève</s:a></li>
 		</ul>
              
             </nav>

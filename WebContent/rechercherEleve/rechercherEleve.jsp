@@ -8,7 +8,7 @@
 <body>
 <div class="container">
 <%@ include file="/HeaderEtFooter/header.jsp" %>
-<%@ include file="/Menu/menu.jsp" %>
+<%@ include file="/Menu/MenuTuteur.jsp" %>
 
 <div class=" accelev col-lg-10 col-sm-10 col-md-10">
         
@@ -16,7 +16,7 @@
          
             
        <sx:autocompleter size="1" list="personnes" name="eleve" showDownArrow="false" label="Nom de l'élève" autoComplete="true"></sx:autocompleter>
-       
+       <s:property value="prenom"></s:property>
 </div>
 <%@ include file="/HeaderEtFooter/footer.jsp" %>
  <%@ include file="/imports/importsJs.jsp" %>

@@ -18,7 +18,8 @@
     
     <action name="login" class="com.dev.actions.LoginAction" method="execute">
         <result name="SUCCESSeleve" >/accueil/AccueilEleve.jsp</result>
-        <result name="SUCCESSprof" >/accueil/AccueilProfesseur.jsp</result>
+        <result name="SUCCESStuteur" >/accueil/AccueilTuteur.jsp</result>
+        <result name="SUCCESSrespo" >/accueil/AccueilResponsable.jsp</result>
         <result name="SUCCESSadmin" >/accueil/AccueilAdmin.jsp</result>
         <result name="INPUT">/connexion/connexion.jsp</result>  
     </action>
@@ -47,7 +48,15 @@
     <action name="gotoRecherche" class="com.dev.actions.RedirectionsAction" method="redirectionRecherche">
     	<result name="recherche">/rechercherEleve/rechercherEleve.jsp</result>
     </action>
-    
+    <action name="gotoExportNotes" class="com.dev.actions.RedirectionsAction" method="redirectionExportNotes">
+    	<result name="exportNotes">/accueil/AccueilAdmin.jsp</result>
+    </action>
+    <action name="gotoFicheEleve" class="com.dev.actions.RedirectionsAction" method="redirectionFicheEleve">
+    	<result name="ficheEleve">/profil/ProfilEleve.jsp</result>
+    </action>
+    <action name="gotoRecherche" class="com.dev.actions.Autocomplete">
+    	<result name="SUCCESS">/rechercherEleve/rechercherEleve.jsp</result>
+    </action>
     
     <action name="addFamille" class="com.dev.actions.FamilleAction" method="add">
             <result name="success">/competences/gestion.jsp</result>

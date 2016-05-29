@@ -17,7 +17,7 @@ public class AutocompleteManager {
         List<String> personnes = null;
         try {
              
-            personnes = (List<String>)session.createQuery("select nom,prenom from Personnes").list();
+            personnes = (List<String>)session.createQuery("select nom,prenom from Personnes where droit=1").list();
             
              
         } catch (HibernateException e) {
