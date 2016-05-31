@@ -6,16 +6,8 @@
 		<%@ include file="/HeaderEtFooter/header.jsp"%>
 		<%@ include file="/Menu/menuEleve.jsp"%>
 
-		<div class=" accelev col-lg-10 col-sm-10 col-md-10">
-
-			<h1>GAPP Eleve</h1>
-			<s:property value="nom"></s:property>
-			<s:property value="id_personne"></s:property>
-			<s:property value="email"></s:property>
-		</div>
-
 		<div class=" accelev col-sm-10 col-md-10">
-
+		<h1>GAPP</h1>
 			<center>
 				<h1>Mon profil</h1>
 			</center>

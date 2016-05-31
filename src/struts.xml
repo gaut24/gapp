@@ -45,6 +45,9 @@
     <action name="gotoCompetences" class="com.dev.actions.RedirectionsAction" method="redirectionCompetences">
     	<result name="competences">/competences/gestion.jsp</result>
     </action>
+    <action name="gotoCompetences" class="com.dev.actions.FamilleAction">
+    	<result name="success">/competences/gestion.jsp</result>
+    </action>
     <action name="gotoRecherche" class="com.dev.actions.RedirectionsAction" method="redirectionRecherche">
     	<result name="recherche">/rechercherEleve/rechercherEleve.jsp</result>
     </action>
@@ -65,6 +68,9 @@
             <result name="success">/competences/gestion.jsp</result>
     </action>
     <action name="addCompetences" class="com.dev.actions.CompetenceAction" method="add">
+            <result name="success">/competences/gestion.jsp</result>
+    </action>
+    <action name="addCompetences" class="com.dev.actions.FamilleAction">
             <result name="success">/competences/gestion.jsp</result>
     </action>
 </package>
