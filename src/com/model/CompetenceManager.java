@@ -36,7 +36,7 @@ public class CompetenceManager extends HibernateUtil {
         List<Competences> competences = null;
         try {
              
-        	competences = (List<Competences>)session.createQuery("from Competences").list();
+        	competences = (List<Competences>)session.createQuery("from Competences order by id_famille ASC").list();
              
         } catch (HibernateException e) {
             e.printStackTrace();

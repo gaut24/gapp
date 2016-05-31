@@ -42,7 +42,7 @@
 <s:iterator value="famillesList" var="familles">
     <tr>
         <td><s:property value="nom"/></td>
-        <td></td>
+        <td><s:iterator value="competencesList" var="competences"><s:property value="nom"/></s:iterator></td>
         <td><a href="delete?id=<s:property value="id_famille"/>">x</a></td>
     </tr> 
 </s:iterator>
