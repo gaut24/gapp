@@ -40,6 +40,7 @@ public class LoginAction implements Action, ModelDriven<Personnes>, ServletConte
             if(droit == 1) return "SUCCESSeleve";
             else if (droit == 2) return "SUCCESSprof";
             else return "SUCCESSadmin";
+            
         }
     }
  

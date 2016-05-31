@@ -12,6 +12,7 @@
        <s:property value="nom"></s:property>
        <s:property value="id_personne"></s:property>
        <s:property value="email"></s:property>
+     
 </div>
 
 <%@ include file="/HeaderEtFooter/footer.jsp" %>

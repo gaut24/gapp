@@ -26,7 +26,31 @@
         	</div>
         	</center>
         	<div class="col-md-3 col-md-offset-1">
+        	<!--   List tuteurList = (List)session.getAttribute("listeClients");
+int i; %>-->
         		<center>Tuteur</center>
+				<table>
+					<tr>
+					    <th>Famille</th>
+					    <th>Supprimer</th>
+					</tr>
+					<s:iterator value="tuteurList[0]" var="tuteur">
+						
+					<!--   for(int i=0; i< tuteurList.size(); i++) { %> -->
+					    <tr>
+					        <td><s:property value="top" />
+					        </td>
+					        <td></td>
+					        <td>x</td>
+					    </tr> 
+					  
+					</s:iterator>
+					<logic:iterate name="tuteurList" id="tlid">
+					<p>
+					<bean:write name="tlid" property="num_groupe" />
+					</p>
+					</logic:iterate>
+				</table>
         	</div>
         </div>
         

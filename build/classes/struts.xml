@@ -45,6 +45,9 @@
     <action name="gotoCompetences" class="com.dev.actions.FamilleAction">
     	<result name="success">/competences/gestion.jsp</result>
     </action>
+       <action name="gotoMonProfil" class="com.dev.actions.TuteurAction">
+    	<result name="success">/profil/ProfilEleve.jsp</result>
+    </action>
     <action name="addFamille" class="com.dev.actions.FamilleAction" method="add">
             <result name="success">/competences/gestion.jsp</result>
         </action>
