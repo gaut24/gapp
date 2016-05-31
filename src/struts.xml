@@ -25,7 +25,7 @@
     </action>
     <action name="searchStudent" class="com.dev.actions.RechercheEleveAction" method="execute">
         <result name="SUCCESS" >/ficheEleve/ficheEleve.jsp</result>
-        <result name="INPUT" >/rechercherEleve/rechercherEleve.jsp</result>
+        <result name="INPUT" >/connexion/connexion.jsp</result>
     </action>
     <action name="gotoMonProfil" class="com.dev.actions.RedirectionsAction"
       method="redirectionProfil">

@@ -2,6 +2,7 @@ package com.model;
 
 import java.util.List;
 
+import org.db.Familles;
 import org.db.Personnes;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -12,16 +13,22 @@ import com.dev.actions.HibernateUtil;
 
 public class SearchEleveManager {
 	
-	public Personnes getEleve(String nom) {
-		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+	@SuppressWarnings("unchecked")
+	public List<Personnes> list() {
+        
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
-        Query query = session.createQuery("from Personnes where nom=:nom");
-        query.setString("nom", nom); 
-        Personnes personnes = (Personnes) query.uniqueResult();
-        if(personnes != null){
-            System.out.println("User get from DB::"+personnes);
+        List<Personnes> personnesEleve = null;
+        try {
+             
+        	Query query = (Query)session.createQuery("from Personnes").list();
+        	personnesEleve = (List<Personnes>) query;
+             
+        } catch (HibernateException e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
         }
         session.getTransaction().commit();
-        return personnes;
+        return personnesEleve;
     }
 }
