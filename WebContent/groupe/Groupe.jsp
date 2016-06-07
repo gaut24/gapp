@@ -10,7 +10,7 @@
         
         <div class=" accelev col-sm-10 col-md-10">
         
-         <center><h1>Mon Groupe : G4 E</h1></center></br>
+         <center><h1>Mon Groupe : <s:property value="#session.groupe"/></h1></center></br>
          <div class="row">
         	<div class="col-md-3">
         		 		<center>Membres</center>

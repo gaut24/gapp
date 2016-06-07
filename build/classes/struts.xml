@@ -20,8 +20,10 @@
         <result name="SUCCESSeleve" >/accueil/AccueilEleve.jsp</result>
         <result name="SUCCESSprof" >/accueil/AccueilProfesseur.jsp</result>
         <result name="SUCCESSadmin" >/accueil/AccueilAdmin.jsp</result>
+        <result name="SUCCESSrespo" >/accueil/AccueilResponsable.jsp</result>
         <result name="INPUT">/connexion/connexion.jsp</result>  
     </action>
+    
     
      <action name="gotoMonProfil" class="com.dev.actions.RedirectionsAction"
       method="redirectionProfil">
@@ -35,7 +37,7 @@
     
     <action name="gotoGroupe" class="com.dev.actions.RedirectionsAction"
       method="redirectionGroupe">
-    	<result name="groupe">/groupe/MonGroupeEleve.jsp</result>
+    	<result name="groupe">/groupe/Groupe.jsp</result>
     </action>
     
     <action name="gotoGroupe" class="com.dev.actions.MembresGroupeAction">
@@ -73,6 +75,9 @@
     </action>
     <action name="gotoRecherche" class="com.dev.actions.Autocomplete">
     	<result name="SUCCESS">/rechercherEleve/rechercherEleve.jsp</result>
+    </action>
+    <action name="searchEleve" class="com.dev.actions.RechercheEleveAction">
+    	<result name="SUCCESS">/rechercherEleve/ficheEleve.jsp</result>
     </action>
     
     <action name="addFamille" class="com.dev.actions.FamilleAction" method="add">
