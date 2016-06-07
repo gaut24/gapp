@@ -13,8 +13,7 @@
          <center><h1>Mon Groupe : G4 E</h1></center></br>
          <div class="row">
         	<div class="col-md-3">
-        		<center>Membres</center>
-
+        		 		<center>Membres</center>
         			<table>
 				
 	
@@ -28,7 +27,6 @@
 </s:iterator>
 				
 				</table>
-
         		
         		
         	</div>
