@@ -35,7 +35,7 @@
     
     <action name="gotoGroupe" class="com.dev.actions.RedirectionsAction"
       method="redirectionGroupe">
-    	<result name="groupe">/groupe/Groupe.jsp</result>
+    	<result name="groupe">/groupe/MonGroupeEleve.jsp</result>
     </action>
     
     <action name="gotoEvaluationCroise" class="com.dev.actions.RedirectionsAction"
@@ -48,6 +48,29 @@
        <action name="gotoMonProfil" class="com.dev.actions.TuteurAction">
     	<result name="success">/profil/ProfilEleve.jsp</result>
     </action>
+
+    <action name="gotoRoles" class="com.dev.actions.RedirectionsAction" method="redirectionRoles">
+    	<result name="roles">/roles/AttributionRoles.jsp</result>
+    </action>
+    <action name="gotoAttributionGroupe" class="com.dev.actions.RedirectionsAction" method="redirectionAttributionGroupe">
+    	<result name="attributionGroupe">/groupe/AttributionGroupe.jsp</result>
+    </action>
+    <action name="gotoDeadline" class="com.dev.actions.RedirectionsAction" method="redirectionDeadline">
+    	<result name="deadline">/deadline/GestionDeadline.jsp</result>
+    </action>
+    <action name="gotoRecherche" class="com.dev.actions.RechercheEleveAction" method="execute">
+    	<result name="success">/rechercherEleve/rechercherEleve.jsp</result>
+    </action>
+    <action name="gotoExportNotes" class="com.dev.actions.RedirectionsAction" method="redirectionExportNotes">
+    	<result name="exportNotes">/accueil/AccueilAdmin.jsp</result>
+    </action>
+    <action name="gotoFicheEleve" class="com.dev.actions.RedirectionsAction" method="redirectionFicheEleve">
+    	<result name="ficheEleve">/profil/ProfilEleve.jsp</result>
+    </action>
+    <action name="gotoRecherche" class="com.dev.actions.Autocomplete">
+    	<result name="SUCCESS">/rechercherEleve/rechercherEleve.jsp</result>
+    </action>
+    
     <action name="addFamille" class="com.dev.actions.FamilleAction" method="add">
             <result name="success">/competences/gestion.jsp</result>
         </action>
