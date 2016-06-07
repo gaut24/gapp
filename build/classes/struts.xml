@@ -38,6 +38,10 @@
     	<result name="groupe">/groupe/Groupe.jsp</result>
     </action>
     
+    <action name="gotoGroupe" class="com.dev.actions.MembresGroupeAction">
+    <result name="success">/groupe/Groupe.jsp</result>
+    </action>
+    
     <action name="gotoEvaluationCroise" class="com.dev.actions.RedirectionsAction"
       method="redirectionEvaluationCroise">
     	<result name="evaluation">/evaluationCroise/EvaluationCroise.jsp</result>
