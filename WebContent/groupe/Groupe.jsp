@@ -20,7 +20,7 @@
 				
 				<s:iterator value="membresList" var="membres">
     <tr>
-        <td><s:property value="prenom"/> <s:property value="nom"/></td>
+       <td><s:property value="prenom"/> <s:property value="nom"/></td>
         <td></td>
         
     </tr> 

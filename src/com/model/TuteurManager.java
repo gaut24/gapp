@@ -29,7 +29,7 @@ private Map<String, Object> userSession ;
 	        try {
 	          
 	        	//tuteur = (List<Personnes>)session.createQuery("SELECT p2.* FROM Groupes g, Personnes p, Personnes p2 WHERE g.num_groupe = p.id_groupe AND g.num_groupe= = \"GR-1\" AND g.id_tuteur = p2.id.personne").list();
-	        	//  ((Query) groupes).setString("num", IDgroupe);
+	        	//  ((Query) groupes).setString("num", IDgroupe);vg
 	        	//tuteur = session.createQuery("SELECT g.num_groupe, p2.prenom  FROM  Personnes p2, Groupes g WHERE p2.id_groupe = g.num_groupe  ").list();
 	        	Query q = session.createQuery("SELECT p1.prenom, p1.nom  FROM  Personnes p1, Personnes p2, Groupes g WHERE p2.id_groupe = g.num_groupe AND g.id_tuteur = p1.id_personne ");
 	        	 l1 = q.list();
