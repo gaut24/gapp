@@ -23,7 +23,9 @@
         <result name="SUCCESSadmin" >/accueil/AccueilAdmin.jsp</result>
         <result name="INPUT">/connexion/connexion.jsp</result>  
     </action>
-    
+    <action name="searchEleve" class="com.dev.actions.RechercheEleveAction" method="execute">
+    <result name="SUCCESS">/rechercherEleve/ficheEleve.jsp</result>
+    </action>
     <action name="gotoMonProfil" class="com.dev.actions.RedirectionsAction"
       method="redirectionProfil">
     	<result name="profil">/profil/ProfilEleve.jsp</result>
@@ -50,6 +52,9 @@
     </action>
     <action name="gotoRecherche" class="com.dev.actions.RedirectionsAction" method="redirectionRecherche">
     	<result name="recherche">/rechercherEleve/rechercherEleve.jsp</result>
+    </action>
+    <action name="gotoRecherche" class="com.dev.actions.RechercheEleveAction" method="execute">
+    	<result name="success">/rechercherEleve/rechercherEleve.jsp</result>
     </action>
     <action name="gotoExportNotes" class="com.dev.actions.RedirectionsAction" method="redirectionExportNotes">
     	<result name="exportNotes">/accueil/AccueilAdmin.jsp</result>

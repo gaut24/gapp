@@ -14,9 +14,12 @@
         
          <h1>Rechercher un élève</h1>
          
-            
-       <sx:autocompleter size="1" list="personnes" name="eleve" showDownArrow="false" label="Nom de l'élève" autoComplete="true"></sx:autocompleter>
-       <s:property value="prenom"></s:property>
+        <s:form  action="searchEleve">
+       <sx:autocompleter size="1" list="personnes" name="eleveNom" showDownArrow="false" label="Nom de l'élève" autoComplete="true"></sx:autocompleter>
+       <s:submit value="Envoyer"></s:submit>
+       </s:form>
+       
+       <s:property value="#personnes.nom"></s:property>
 </div>
 <%@ include file="/HeaderEtFooter/footer.jsp" %>
  <%@ include file="/imports/importsJs.jsp" %>
