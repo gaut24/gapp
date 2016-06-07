@@ -36,4 +36,16 @@ public class RedirectionsAction {
 		  
 		    return "exportNotes";
 		  }
+	 public String redirectionRoles() {
+		  
+		    return "roles";
+		  }
+	 public String redirectionAttributionGroupe() {
+		  
+		    return "attributionGroupe";
+		  }
+	 public String redirectionDeadline() {
+		  
+		    return "deadline";
+		  }
 }
