@@ -19,7 +19,6 @@
        <s:submit value="Envoyer"></s:submit>
        </s:form>
        
-       <s:property value="#personnes.nom"></s:property>
 </div>
 <%@ include file="/HeaderEtFooter/footer.jsp" %>
  <%@ include file="/imports/importsJs.jsp" %>
