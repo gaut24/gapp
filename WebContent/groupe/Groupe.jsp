@@ -14,19 +14,6 @@
          <div class="row">
         	<div class="col-md-3">
         		<center>Membres</center>
-        			<table>
-				
-	
-				
-				<s:iterator value="membresList" var="membres">
-    <tr>
-        <td><s:property value="prenom"/> <s:property value="nom"/></td>
-        <td></td>
-        
-    </tr> 
-</s:iterator>
-				
-				</table>
         		
         		
         	</div>
