@@ -19,11 +19,10 @@ import org.hibernate.classic.Session;
 import com.dev.actions.HibernateUtil;
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ModelDriven;
-
 public class MembresGroupeManager  extends HibernateUtil {
- 
- 
- 
+	 
+	 
+	 
     public List<Personnes> list() {
          
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
