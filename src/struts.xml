@@ -23,6 +23,9 @@
         <result name="SUCCESSrespo" >/accueil/AccueilResponsable.jsp</result>
         <result name="INPUT">/connexion/connexion.jsp</result>  
     </action>
+    <action name="logout" class="com.dev.actions.LoginAction" method="logout">
+        <result name="SUCCESS" >/connexion/connexion.jsp</result>
+    </action>
     
     
      <action name="gotoMonProfil" class="com.dev.actions.RedirectionsAction"

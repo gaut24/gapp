@@ -64,6 +64,10 @@ public class LoginAction implements Action, ModelDriven<Personnes>, ServletConte
 		// TODO Auto-generated method stub
 		userSession = session;
 	}
+	public String logout(){ 
+		userSession.clear();
+	    return "SUCCESS";  
+	}  
 	
      
 }

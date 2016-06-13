@@ -7,7 +7,7 @@
 			       	 </div>
 			       	 <div class="col-md-2 col-md-offset-7">  
 			       	 <div class="btndeco">
-			        	 <button type="button" class="btn btn-danger">Déconnexion</button>
+			        	 <a href="/gapp/logout.action"><button type="button" class="btn btn-danger">Déconnexion</button></a>
 			        </div>	 
 			        </div>	 
 	         </div>
