@@ -23,20 +23,19 @@ public class MembresGroupeManager  extends HibernateUtil {
 	 
 	 
 	 
-    public List<Personnes> list() {
+    public List<String> list(String id_groupe) {
          
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
-        List<Personnes> competences = null;
+        List<String> membres = null;
         try {
-             
-        	competences = (List<Personnes>)session.createQuery("from Personnes WHERE id_groupe='GR-1' ").list();
+        	membres = (List<String>)session.createQuery("from Personnes where id_groupe='"+id_groupe+"'").list();
              
         } catch (HibernateException e) {
             e.printStackTrace();
             session.getTransaction().rollback();
         }
         session.getTransaction().commit();
-        return competences;
+        return membres;
     }
 }
