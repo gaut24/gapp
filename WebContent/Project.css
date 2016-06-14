@@ -1,26 +1,28 @@
 html, body{
     height:100%;
     width: 100%;
-     background-color: #D8D5D4;
+     background-color: #e9ebee;
 }
+
 .container{
     width:90%%;
     height:100%;
-   background-color: #D8D5D4;
+   background-color: #e9ebee;
     padding-top:20px;
     padding-bottom:20px;
-     font-family: "Comic Sans MS";
+     font-family: "helvetica";
+     color: black;
 }
 .css_jour_evenement span { background: none !important; background-color: #FF0000 !important; color: blue !important; }
 #formulaire{
     background-color: white;
-    border: 1px solid grey;
+    border: 1px solid #b5b5b5;
     border-radius: 10px;
    margin-top:10%;
     margin-bottom: 19%;
     padding-bottom: 15px;
     padding-top: 30px;
-    width: 280px;
+    width: 400px;
 }
 
 .label{
@@ -33,8 +35,8 @@ input{
 }
 
 section{
-	background-color: #e3e7e6;
-	border: 2px solid black;
+	background-color: #84aad8;
+	border: 2px solid #b5b5b5;
     line-height: 40px;
 }
 
@@ -50,11 +52,14 @@ section{
 }
 header{
 	border-radius: 5px 5px 0 0;
+	border: 2px solid #b5b5b5;
+	border-bottom: 0px solid #b5b5b5;;
 }
 
 footer{
 	text-align: center;	
-	
+	border: 2px solid #b5b5b5;
+	border-top: none;
 	border-radius: 0px 0px 5px 5px;
 }
 
@@ -64,6 +69,7 @@ footer{
 }
 
 .btndeco{
+	margin-bottom: 8px;
 	padding-top:11px;
 }
 
@@ -130,12 +136,17 @@ font-size: 11px;
 	color : red;
 }
 
+.accMenu a{
+	color: white;
+}
+
 .accMenu{margin-left:0px;}
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
+
 @media (min-width: 992px) {
   .container {
     width: 970px;
@@ -145,4 +156,15 @@ font-size: 11px;
   .container {
     width: 1170px;
   }
+}
+
+/* style de tous les boutons submit */
+#login_0, #searchEleve_0, #addFamille_0, #addCompetences_0, #addlivrable_0, #assignEleveToGroupe_0
+{
+	margin-top: 2px;
+	background: #84aad8;
+    border: 1px solid #5a7698;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
 }

@@ -43,7 +43,7 @@
     <tr>
         <td><s:property value="nom"/></td>
         <td></td>
-        <td><a href="delete?id=<s:property value="id_famille"/>">x</a></td>
+        <td><a href="deleteFamille?id=<s:property value="id_famille"/>">x</a></td>
     </tr> 
 </s:iterator>
 </table>

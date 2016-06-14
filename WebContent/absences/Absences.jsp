@@ -54,7 +54,7 @@
 			<td>
 			${abscencesList[3]}
 			</td>
-			<td><a href="delete?id=${abscencesList[4]}">x</a></td>
+			<td><a href="deleteAbsence?id=${abscencesList[4]}">x</a></td>
 			</tr>
 			</c:forEach>
 			</table>

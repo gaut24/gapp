@@ -57,11 +57,11 @@
     <action name="addFamille" class="com.dev.actions.FamilleAction" method="add">
             <result name="success">/competences/gestion.jsp</result>
         </action>
-    <action name="delete" class="com.dev.actions.FamilleAction" method="delete">
-            <result name="success">/competences/gestion.jsp</result>
+    <action name="deleteFamille" class="com.dev.actions.FamilleAction" method="delete">
+            <result name="success" type="chain">gotoCompetences</result>
     </action>
     <action name="addCompetences" class="com.dev.actions.CompetenceAction" method="add">
-            <result name="success">/competences/gestion.jsp</result>
+            <result name="success" type="chain">gotoCompetences</result>
     </action>
     <!-- Profil -->
        <action name="gotoMonProfil" class="com.dev.actions.TuteurAction">
@@ -123,7 +123,7 @@
     <action name="addAbscences" class="com.dev.actions.AbscencesAction" method="add">
     	<result name="SUCCESS" type="chain">gotoAbsences</result>
     </action>
-    <action name="delete" class="com.dev.actions.AbscencesAction" method="delete">
+    <action name="deleteAbsence" class="com.dev.actions.AbscencesAction" method="delete">
     	<result name="SUCCESS" type="chain">gotoAbsences</result>
     </action>
     
