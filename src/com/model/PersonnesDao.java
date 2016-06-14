@@ -1,4 +1,4 @@
-package com.dev.actions;
+package com.model;
 
  
 import org.db.Personnes;

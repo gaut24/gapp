@@ -10,6 +10,9 @@ import org.apache.struts2.util.ServletContextAware;
 import org.hibernate.SessionFactory;
  
 import com.dev.actions.*;
+import com.model.PersonnesDao;
+import com.model.PersonnesDaoImpl;
+
 import org.db.Personnes;
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionContext;

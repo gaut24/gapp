@@ -20,6 +20,7 @@ public class Autocomplete extends ActionSupport {
 	
 	}
 	public String execute() {
+		
 		this.personnes = AutocompleteManager.list();
 		return "SUCCESS";
 	}
