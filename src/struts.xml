@@ -11,7 +11,9 @@
 <package name="com.dev.actions"  namespace="/" extends="struts-default json-default">
     <!-- Action de l'action de rÃ©ference -->   
      <default-action-ref name="connexion_User"/> 
-    
+    <action name="test" class="com.dev.actions.FamilleCompetenceAction">
+    	<result name="success">/test.jsp</result>
+    </action>
     <action name="connexion_User">
       <result>/connexion/connexion.jsp</result>
     </action>
