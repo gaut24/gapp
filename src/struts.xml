@@ -15,7 +15,7 @@
     <action name="connexion_User">
       <result>/connexion/connexion.jsp</result>
     </action>
-    
+    <!-- Login et logout -->
     <action name="login" class="com.dev.actions.LoginAction" method="execute">
         <result name="SUCCESSeleve" >/accueil/AccueilEleve.jsp</result>
         <result name="SUCCESSprof" >/accueil/AccueilProfesseur.jsp</result>
@@ -27,40 +27,51 @@
         <result name="SUCCESS" >/connexion/connexion.jsp</result>
     </action>
     
-    
+    <!-- Profil -->
      <action name="gotoMonProfil" class="com.dev.actions.RedirectionsAction"
       method="redirectionProfil">
     	<result name="profil">/profil/ProfilEleve.jsp</result>
     </action>
-    
+    <!-- Grille -->
     <action name="gotoGrilleComp" class="com.dev.actions.RedirectionsAction"
       method="redirectionGrille">
     	<result name="grille">/grille/Grille.jsp</result>
     </action>
-    
+    <!-- Groupe -->
     <action name="gotoGroupe" class="com.dev.actions.RedirectionsAction"
       method="redirectionGroupe">
     	<result name="groupe">/groupe/Groupe.jsp</result>
     </action>
-    
     <action name="gotoGroupe" class="com.dev.actions.MembresGroupeAction">
     <result name="success">/groupe/Groupe.jsp</result>
     </action>
-    
+    <!-- Evaluation croisé -->
     <action name="gotoEvaluationCroise" class="com.dev.actions.RedirectionsAction"
       method="redirectionEvaluationCroise">
     	<result name="evaluation">/evaluationCroise/EvaluationCroise.jsp</result>
     </action>
+    <!-- Compétences -->
     <action name="gotoCompetences" class="com.dev.actions.FamilleAction">
     	<result name="success">/competences/gestion.jsp</result>
     </action>
+    <action name="addFamille" class="com.dev.actions.FamilleAction" method="add">
+            <result name="success">/competences/gestion.jsp</result>
+        </action>
+    <action name="delete" class="com.dev.actions.FamilleAction" method="delete">
+            <result name="success">/competences/gestion.jsp</result>
+    </action>
+    <action name="addCompetences" class="com.dev.actions.CompetenceAction" method="add">
+            <result name="success">/competences/gestion.jsp</result>
+    </action>
+    <!-- Profil -->
        <action name="gotoMonProfil" class="com.dev.actions.TuteurAction">
     	<result name="success">/profil/ProfilEleve.jsp</result>
     </action>
-
+	<!-- Attribution roles -->
     <action name="gotoRoles" class="com.dev.actions.RedirectionsAction" method="redirectionRoles">
     	<result name="roles">/roles/AttributionRoles.jsp</result>
     </action>
+    <!-- Attribution groupe -->
     <action name="gotoAttributionGroupe" class="com.dev.actions.RedirectionsAction" method="redirectionAttributionGroupe">
     	<result name="attributionGroupe">/groupe/AttributionGroupe.jsp</result>
     </action>
@@ -76,15 +87,19 @@
     <action name="assignEleveToGroupe" class="com.dev.actions.PersonneToGroupeAction" method="update">
     	<result name="SUCCESS" type="chain">gotoAttributionGroupe</result>
     </action>
+    <!-- Deadlines -->
     <action name="gotoDeadline" class="com.dev.actions.RedirectionsAction" method="redirectionDeadline">
     	<result name="deadline">/deadline/GestionDeadline.jsp</result>
     </action>
+    <!-- Rechercher élève -->
     <action name="gotoRecherche" class="com.dev.actions.RechercheEleveAction" method="execute">
     	<result name="success">/rechercherEleve/rechercherEleve.jsp</result>
     </action>
+    <!-- Export notes -->
     <action name="gotoExportNotes" class="com.dev.actions.RedirectionsAction" method="redirectionExportNotes">
     	<result name="exportNotes">/accueil/AccueilAdmin.jsp</result>
     </action>
+    <!-- Rechercher élève -->
     <action name="gotoFicheEleve" class="com.dev.actions.RedirectionsAction" method="redirectionFicheEleve">
     	<result name="ficheEleve">/profil/ProfilEleve.jsp</result>
     </action>
@@ -94,16 +109,24 @@
     <action name="searchEleve" class="com.dev.actions.RechercheEleveAction">
     	<result name="SUCCESS">/rechercherEleve/ficheEleve.jsp</result>
     </action>
+    <!-- Absences -->
+    <action name="gotoAbsences" class="com.dev.actions.RedirectionsAction" method="redirectionAbsences">
+    	<result name="absences">/absences/Absences.jsp</result>
+    </action>
+    <action name="gotoAbsences" class="com.dev.actions.Autocomplete">
+    	<result name="SUCCESS" type="chain">displayAbsences</result>
+    </action>
+    <action name="displayAbsences" class="com.dev.actions.AbscencesAction">
+    	<result name="SUCCESS">/absences/Absences.jsp</result>
+    </action>
     
-    <action name="addFamille" class="com.dev.actions.FamilleAction" method="add">
-            <result name="success">/competences/gestion.jsp</result>
-        </action>
-    <action name="delete" class="com.dev.actions.FamilleAction" method="delete">
-            <result name="success">/competences/gestion.jsp</result>
+    <action name="addAbscences" class="com.dev.actions.AbscencesAction" method="add">
+    	<result name="SUCCESS" type="chain">gotoAbsences</result>
     </action>
-    <action name="addCompetences" class="com.dev.actions.CompetenceAction" method="add">
-            <result name="success">/competences/gestion.jsp</result>
+    <action name="delete" class="com.dev.actions.AbscencesAction" method="delete">
+    	<result name="SUCCESS" type="chain">gotoAbsences</result>
     </action>
+    
 </package>   
 	<include file="com/objis/demostruts2/example.xml" />
 

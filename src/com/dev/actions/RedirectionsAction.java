@@ -37,4 +37,8 @@ public class RedirectionsAction {
 		  
 		    return "deadline";
 		  }
+	 public String redirectionAbsences() {
+		  
+		    return "absences";
+		  }
 }

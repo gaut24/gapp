@@ -12,7 +12,7 @@
 			<h1>Attribution des groupes</h1>
 			<h2>Attribution Elèves</h2>
 			<s:form action="assignEleveToGroupe">
-		<sx:autocompleter size="1" list="personnes" name="eleveNomToGroupe" showDownArrow="true" label="Nom de l'élève" autoComplete="true"></sx:autocompleter>
+		<sx:autocompleter size="1" list="personnes" listKey="nom" listValue="nom+', '+prenom" name="eleveNomToGroupe" showDownArrow="true" label="Nom de l'élève" autoComplete="true"></sx:autocompleter>
 		<s:select name="eleveToGroupe" list="groupesList" label="Nom du groupe"></s:select>
 		<s:submit value="Valider"></s:submit>
 		</s:form>

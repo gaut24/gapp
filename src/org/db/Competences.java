@@ -38,6 +38,5 @@ public class Competences {
 		this.coefficient = coefficient;
 	}
 	
-	
 
 }

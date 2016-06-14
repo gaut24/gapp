@@ -32,8 +32,7 @@ public class RechercheEleveAction extends ActionSupport{
     public String execute() {
     	ValueStack stack = ActionContext.getContext().getValueStack();
         Map<String, Object> context = new HashMap<String, Object>();
-
-        Personnes eleve = (Personnes)rechercheEleveManager.list(eleveNom);
+        Personnes eleve = (Personnes)rechercheEleveManager.list(eleveNom.substring(0, eleveNom.indexOf(",")));
         personnes.setNom(eleve.getNom());
         personnes.setPrenom(eleve.getPrenom());
         context.put("nom", eleve.getNom()); 

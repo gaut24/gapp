@@ -11,7 +11,7 @@
         <property name="id_personne" type="int">
             <column name="ID_PERSONNE" />
         </property>
-        <property name="date_abscence" type="java.util.Date">
+        <property name="date_abscence" type="java.lang.String">
             <column name="DATE_ABSCENCE" />
         </property>
         <property name="justificatif" type="java.lang.String">
