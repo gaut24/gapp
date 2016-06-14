@@ -66,7 +66,5 @@ public class Personnes {
 		this.id_groupe = id_groupe;
 	}
 	
-	
-
 }
 

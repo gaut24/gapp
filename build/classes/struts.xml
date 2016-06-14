@@ -38,6 +38,12 @@
     	<result name="groupe">/groupe/Groupe.jsp</result>
     </action>
     
+    <action name="gotoAbsences" class="com.dev.actions.AbscencesAction">
+            <result name="success">/absences/Absences.jsp</result>
+    </action>
+    <action name="addAbscences" class="com.dev.actions.AbscencesAction" method="add">
+            <result name="success">/absences/Absences.jsp</result>
+    </action>
     <action name="gotoEvaluationCroise" class="com.dev.actions.RedirectionsAction"
       method="redirectionEvaluationCroise">
     	<result name="evaluation">/evaluationCroise/EvaluationCroise.jsp</result>
@@ -54,6 +60,7 @@
     <action name="addCompetences" class="com.dev.actions.CompetenceAction" method="add">
             <result name="success">/competences/gestion.jsp</result>
     </action>
+
 </package>   
 	<include file="com/objis/demostruts2/example.xml" />
 

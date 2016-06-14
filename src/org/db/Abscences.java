@@ -36,6 +36,6 @@ public class Abscences {
 	public void setJustificatif(String justificatif) {
 		this.justificatif = justificatif;
 	}
-
+	
 	 
 }

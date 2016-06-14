@@ -25,4 +25,5 @@ public class RedirectionsAction {
 		  
 		    return "competences";
 		  }
+
 }
