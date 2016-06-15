@@ -14,6 +14,7 @@ public class AbscencesAction extends ActionSupport{
     private List<Object[]> abscencesList;
     private List<Personnes> personnesList;
     private int id;
+    private List<String> count;
  
     private AbscencesManager abscencesManager;
  
@@ -35,6 +36,12 @@ public class AbscencesAction extends ActionSupport{
             e.printStackTrace();
         }
         this.abscencesList = abscencesManager.list();
+        return "SUCCESS";
+    }
+    
+    public String count() {
+    	this.count = abscencesManager.count();
+    	System.out.println(this.count);
         return "SUCCESS";
     }
  

@@ -2,6 +2,8 @@ package com.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.management.Query;
+
 import org.db.Abscences;
 import org.db.Personnes;
 import org.hibernate.HibernateException;
@@ -29,6 +31,8 @@ public class AbscencesManager extends HibernateUtil {
         session.getTransaction().commit();
         return abscences;
     }
+    
+    
  
     public List<Object[]> list() {
          
@@ -44,6 +48,23 @@ public class AbscencesManager extends HibernateUtil {
         }
         session.getTransaction().commit();
         return abscences;
+    }
+    
+    public List<String> count() {
+        
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+        List<String> txabscences = null;
+        try {
+            Query query = (Query) session.createQuery("select count(*) from Abscences where id_personne=1");
+            txabscences = (List<String>) query;
+            
+        } catch (HibernateException e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
+        session.getTransaction().commit();
+        return txabscences;
     }
 
 }

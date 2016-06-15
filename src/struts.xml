@@ -65,7 +65,10 @@
     </action>
     <!-- Profil -->
        <action name="gotoMonProfil" class="com.dev.actions.TuteurAction">
-    	<result name="success">/profil/ProfilEleve.jsp</result>
+    	<result name="success" type="chain">test</result>
+    </action>
+    <action name="test" class="com.dev.actions.AbscencesAction" method="count">
+    	<result name="SUCCESS">/profil/ProfilEleve.jsp</result>
     </action>
 	<!-- Attribution roles -->
     <action name="gotoRoles" class="com.dev.actions.RedirectionsAction" method="redirectionRoles">
