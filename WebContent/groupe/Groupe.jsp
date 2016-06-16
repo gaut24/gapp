@@ -37,9 +37,16 @@
         	</div>
         	
         	<div class="col-md-3 col-md-offset-1">
-        	 <s:url id="urlEvaluationCroise" action="gotoEvaluationCroise" />
         		<center>Évaluation croisée</center>
-        		<center><s:a class=" eva_croise btn btn-primary" href="%{urlEvaluationCroise}">Commencer</s:a></center>
+        		<table>
+				<s:iterator value="membresList" var="membres">
+    <tr>
+       <td><a href="evaluationCroise?id=<s:property value="id_personne"/>">Commencer</a></td>
+        <td></td>
+    </tr> 
+</s:iterator>
+				
+				</table>
         	</div>
         </div>
         

@@ -38,6 +38,7 @@ public class RechercheEleveAction extends ActionSupport{
         context.put("nom", eleve.getNom()); 
         context.put("prenom", eleve.getPrenom()); 
         context.put("groupe", eleve.getId_groupe()); 
+        context.put("id", eleve.getId_personne()); 
         System.out.println("eleve called "+eleve.getNom());
         stack.push(context);
         return "SUCCESS";

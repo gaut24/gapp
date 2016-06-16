@@ -17,7 +17,7 @@
     </action>
     <!-- Login et logout -->
     <action name="login" class="com.dev.actions.LoginAction" method="execute">
-        <result name="SUCCESSeleve" >/accueil/AccueilEleve.jsp</result>
+        <result name="SUCCESSeleve" type="chain">gotoMonProfil</result>
         <result name="SUCCESSprof" >/accueil/AccueilProfesseur.jsp</result>
         <result name="SUCCESSadmin" >/accueil/AccueilAdmin.jsp</result>
         <result name="SUCCESSrespo" >/accueil/AccueilResponsable.jsp</result>
@@ -35,7 +35,26 @@
     <!-- Grille -->
     <action name="gotoGrilleComp" class="com.dev.actions.RedirectionsAction"
       method="redirectionGrille">
-    	<result name="grille">/grille/Grille.jsp</result>
+    	<result name="grille" type="chain">grille</result>
+    </action>
+    <action name="grille" class="com.dev.actions.FamilleCompetenceAction">
+    	<result name="success">/grille/Grille.jsp</result>
+    </action>
+    <!-- Evaluation croisé -->
+    <action name="evaluationCroise" class="com.dev.actions.RedirectionsAction"
+      method="redirectionEvaluation">
+    	<result name="eval" type="chain">eval</result>
+    </action>
+    <action name="eval" class="com.dev.actions.FamilleCompetenceAction">
+    	<result name="success">/evaluationCroise/EvaluationCroise.jsp</result>
+    </action>
+    <!-- Evaluation-->
+    <action name="evaluation" class="com.dev.actions.RedirectionsAction"
+      method="redirectionEvaluationProf">
+    	<result name="evalProf" type="chain">evalProf</result>
+    </action>
+    <action name="evalProf" class="com.dev.actions.FamilleCompetenceAction">
+    	<result name="success">/evaluationCroise/Evaluation.jsp</result>
     </action>
     <!-- Groupe -->
     <action name="gotoGroupe" class="com.dev.actions.RedirectionsAction"

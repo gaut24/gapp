@@ -41,4 +41,12 @@ public class RedirectionsAction {
 		  
 		    return "absences";
 		  }
+	 public String redirectionEvaluation() {
+		  
+		    return "eval";
+		  }
+	 public String redirectionEvaluationProf() {
+		  
+		    return "evalProf";
+		  }
 }
