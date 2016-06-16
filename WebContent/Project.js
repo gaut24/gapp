@@ -32,6 +32,7 @@ $(document).ready(function(){
          if (evenement) return [false, 'css_jour_evenement'] ;
          else return [true, ''] ;
      }
+
       
      $(document).ready(function(){
          $("#datepicker").datepicker({

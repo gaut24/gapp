@@ -108,7 +108,19 @@
     </action>
     <!-- Deadlines -->
     <action name="gotoDeadline" class="com.dev.actions.RedirectionsAction" method="redirectionDeadline">
-    	<result name="deadline">/deadline/GestionDeadline.jsp</result>
+    	<result name="deadline" type="chain">displayDeadlines</result>
+    </action>
+    <action name="displayDeadlines" class="com.dev.actions.DeadlinesAction">
+    	<result name="SUCCESS" type="chain">attributionGroupe</result>
+    </action>
+    <action name="addDeadlines" class="com.dev.actions.DeadlinesAction" method="add">
+    	<result name="SUCCESS" type="chain">gotoDeadline</result>
+    </action>
+    <action name="deleteDeadlines" class="com.dev.actions.DeadlinesAction" method="delete">
+    	<result name="SUCCESS" type="chain">gotoDeadline</result>
+    </action>
+    <action name="attributionGroupe" class="com.dev.actions.GroupesAction">
+    	<result name="SUCCESS">/deadline/GestionDeadline.jsp</result>
     </action>
     <!-- Rechercher élève -->
     <action name="gotoRecherche" class="com.dev.actions.RechercheEleveAction" method="execute">

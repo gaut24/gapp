@@ -12,21 +12,51 @@
          
          <h2>Nouvelle date de remise de livrable</h2>
          
-         <s:form  action="addlivrable">
+         <s:form  action="addDeadlines">
          	<label>Date</label>
-			<input type="date" name="date">
+			<input type="date" name="deadlines.date_deadline">
 			<p>Concerne les groupes</p>
-			<INPUT type="checkbox" name="choixGroupe" value="1">G1A
-			<INPUT type="checkbox" name="choixGroupe" value="1">G1B
-			<INPUT type="checkbox" name="choixGroupe" value="1">G2A
-			<INPUT type="checkbox" name="choixGroupe" value="1">G2B
+			<input id="checkAll" type="checkbox" />Tout cocher
+			<div id="checkTest">
+			<s:iterator value="groupesList2" var="groupes">
+        		<input type="checkbox" name="deadlines.num_groupe" value="<s:property value="num_groupe"/>"><s:property value="num_groupe"/>
+			</s:iterator>
+			</div>
 			<p>Description :</p>
-			<input type="text" name="description">
+			<input type="text" name="deadlines.nom">
 			<s:submit value="Ajouter"></s:submit>
 		</s:form>
-		
-       
+		 <h2>Deadlines</h2>
+			<table style="width:100%;">
+			<tr>
+			    <th>Libellé</th>
+			    <th>Groupes</th>
+			    <th>Date</th>
+			</tr>
+			<s:iterator value="deadlinesList" var="deadlines">
+			    <tr>
+			        <td><s:property value="nom"/></td>
+			        <td><s:property value="num_groupe"/></td>
+			        <td><s:property value="date_deadline"/></td>
+			        <td><a href="deleteDeadlines?id=<s:property value="id_deadline"/>">x</a></td>
+			    </tr> 
+			</s:iterator>
+			</table> 
 </div>
-
 <%@ include file="/HeaderEtFooter/footer.jsp" %>
  <%@ include file="/imports/importsJs.jsp" %>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script src="Project.js"></script>
+   <script type="text/javascript">
+   
+   $('#checkAll').click(function() {
+  	// on cherche les checkbox à l'intérieur de l'id  'magazine'
+  	var check = $("#checkTest").find(':checkbox'); 
+  	   if(this.checked){ // si 'checkAll' est coché
+  		   check.prop('checked', true); 
+  	   }else{ // si on décoche 'checkAll'
+  		   check.prop('checked', false);
+  	   }          
+  	});
+   </script>
+ 

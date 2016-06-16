@@ -10,7 +10,7 @@ public class Deadlines {
 	private int id_deadline;
 	private String nom;
 	private String num_groupe;
-	private Date date_deadline;
+	private String date_deadline;
 	
 	public int getId_deadline() {
 		return id_deadline;
@@ -30,13 +30,18 @@ public class Deadlines {
 	public void setNum_groupe(String num_groupe) {
 		this.num_groupe = num_groupe;
 	}
-	public Date getDate_deadline() {
+	public String getDate_deadline() {
 		return date_deadline;
 	}
-	public void setDate_deadline(Date date_deadline) {
+	public void setDate_deadline(String date_deadline) {
 		this.date_deadline = date_deadline;
 	}
-	
+	public Deadlines() {}
+	public Deadlines(String nom, String groupe, String date) {
+	      this.nom = nom;
+	      this.num_groupe = groupe;
+	      this.date_deadline = date;
+	   }
 	
 
 }
