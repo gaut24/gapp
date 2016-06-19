@@ -1,4 +1,5 @@
 <%@ include file="/imports/importsCss.jsp" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <title>AttributionRôles</title>
 </head>
 <body>
@@ -10,33 +11,21 @@
         
          <h1>Attribution des rôles</h1>
        
-
-
-<table>
+<table style="width:100%;">
 	<tr>
 		<td>Nom Prénom</td>
 		<td>Eleve</td>
 		<td>Tuteur</td>
 		<td>Responsable Parcours</td>
 	</tr>
+	<s:iterator value="personnesList" var="personnes">
 	<tr>
-		<td>Nom Prenom 1</td>
-		<td><INPUT type="checkbox" name="choixEleve" value="1"></td>
-		<td><INPUT type="checkbox" name="choixTuteur" value="2"></td>
-		<td><INPUT type="checkbox" name="choixResponsable" value="3"></td>
+		<td><s:property value="nom"/> <s:property value="prenom"/> <s:property value="droit"/></td>
+		<td><input type="radio" name="droit<s:property value="id_personne"/>" value="1"></td>
+		<td><input type="radio" name="droit<s:property value="id_personne"/>" value="2"></td>
+		<td><input type="radio" name="droit<s:property value="id_personne"/>" value="4"></td>
 	</tr>
-	<tr>
-		<td>Nom Prenom 2</td>
-		<td><INPUT type="checkbox" name="choixEleve" value="1"></td>
-		<td><INPUT type="checkbox" name="choixTuteur" value="2"></td>
-		<td><INPUT type="checkbox" name="choixResponsable" value="3"></td>
-	</tr>
-	<tr>
-		<td>Nom Prenom 3</td>
-		<td><INPUT type="checkbox" name="choixEleve" value="1"></td>
-		<td><INPUT type="checkbox" name="choixTuteur" value="2"></td>
-		<td><INPUT type="checkbox" name="choixResponsable" value="3"></td>
-	</tr>
+	</s:iterator>
 </table>
 
 </div>

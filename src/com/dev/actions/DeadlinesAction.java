@@ -29,10 +29,9 @@ public class DeadlinesAction extends ActionSupport{
     }
  
     public String add() {
-    	int nbr_occur=compteurChar(getDeadlines().getNum_groupe().replaceAll(" ", ""), ','); 
         String parseGroupes[]=getDeadlines().getNum_groupe().replaceAll(" ", "").split(",");      
         try {
-        	for(int i = 0; i<(getDeadlines().getNum_groupe().replaceAll(" ", "").length()-nbr_occur)/4; i++){
+        	for(int i = 0; i<parseGroupes.length; i++){
             	System.out.println(parseGroupes[i]);
             	deadlinesManager.add(getDeadlines().getNom(), parseGroupes[i], getDeadlines().getDate_deadline());
             }
@@ -43,15 +42,6 @@ public class DeadlinesAction extends ActionSupport{
         return "SUCCESS";
     }
     
-    public static int compteurChar(String str, char ch) 
-	{
-  	int compteur = 0;                  
-  	for (int i = 0; i < str.length(); i++) 
-    if (str.charAt(i) == ch)             
-       compteur++;                         
-  	return compteur;   
-	}
- 
     public String delete() {
     	deadlinesManager.delete(getId());
         return "SUCCESS";

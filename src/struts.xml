@@ -88,7 +88,10 @@
     </action>
 	<!-- Attribution roles -->
     <action name="gotoRoles" class="com.dev.actions.RedirectionsAction" method="redirectionRoles">
-    	<result name="roles">/roles/AttributionRoles.jsp</result>
+    	<result name="roles" type="chain">displayRoles</result>
+    </action>
+    <action name="displayRoles" class="com.dev.actions.RolesAction">
+    	<result name="SUCCESS">/roles/AttributionRoles.jsp</result>
     </action>
     <!-- Attribution groupe -->
     <action name="gotoAttributionGroupe" class="com.dev.actions.RedirectionsAction" method="redirectionAttributionGroupe">
