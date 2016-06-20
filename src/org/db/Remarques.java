@@ -35,6 +35,11 @@ public class Remarques {
 	public void setText_remarque(String text_remarque) {
 		this.text_remarque = text_remarque;
 	}
-	
+	public Remarques() {}
+	public Remarques(int prof, String groupe, String remarque) {
+	      this.id_from = prof;
+	      this.id_to = groupe;
+	      this.text_remarque = remarque;
+	   }
 
 }

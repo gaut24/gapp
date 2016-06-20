@@ -49,4 +49,12 @@ public class RedirectionsAction {
 		  
 		    return "evalProf";
 		  }
+	 public String redirectionRemarques() {
+		  
+		    return "remarques";
+		  }
+	 public String redirectionRechercheRespo() {
+		  
+		    return "rechercheRespo";
+		  }
 }

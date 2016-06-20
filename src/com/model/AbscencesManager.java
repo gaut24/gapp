@@ -45,5 +45,21 @@ public class AbscencesManager extends HibernateUtil {
         session.getTransaction().commit();
         return abscences;
     }
+    
+    public int count(int id) {
+        
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+        int nbrAbscences=0;
+        try {
+        	nbrAbscences = ((Long) session.createQuery("SELECT COUNT(*) FROM Abscences where id_personne='"+id+"'").uniqueResult()).intValue();
+            
+        } catch (HibernateException e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
+        session.getTransaction().commit();
+        return nbrAbscences;
+    }
 
 }

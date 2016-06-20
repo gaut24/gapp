@@ -1,11 +1,13 @@
 package com.dev.actions;
 
 import java.util.List;
+import java.util.Map;
 
 import org.db.Abscences;
 import org.db.Personnes;
 
 import com.model.AbscencesManager;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class AbscencesAction extends ActionSupport{
@@ -13,7 +15,10 @@ public class AbscencesAction extends ActionSupport{
     private Abscences abscences;
     private List<Object[]> abscencesList;
     private List<Personnes> personnesList;
+    private int countAbscences;
+    private int pourcentage;
     private int id;
+    Map session = (Map) ActionContext.getContext().get("session");
  
     private AbscencesManager abscencesManager;
  
@@ -23,6 +28,8 @@ public class AbscencesAction extends ActionSupport{
  
     public String execute() {
     	this.abscencesList = abscencesManager.list();
+    	this.countAbscences = abscencesManager.count(((int) session.get("id")));
+    	this.pourcentage = ((this.countAbscences*100)/10);
         System.out.println("absences called");
         return "SUCCESS";
     }
@@ -65,5 +72,11 @@ public class AbscencesAction extends ActionSupport{
  
     public void setId(int id) {
         this.id = id;
+    }
+    public int getPourcentage(){
+    	return pourcentage;
+    }
+    public void setPourcentage(int pourcentage){
+    	this.pourcentage = pourcentage;
     }
 }

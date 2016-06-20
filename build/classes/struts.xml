@@ -59,10 +59,13 @@
     <!-- Groupe -->
     <action name="gotoGroupe" class="com.dev.actions.RedirectionsAction"
       method="redirectionGroupe">
-    	<result name="groupe">/groupe/Groupe.jsp</result>
+    	<result name="groupe" type="chain">displayMembres</result>
     </action>
-    <action name="gotoGroupe" class="com.dev.actions.MembresGroupeAction">
-    <result name="success">/groupe/Groupe.jsp</result>
+    <action name="displayMembres" class="com.dev.actions.MembresGroupeAction">
+    <result name="success" type="chain">displayRemarques</result>
+    </action>
+    <action name="displayRemarques" class="com.dev.actions.RemarquesAction">
+    	<result name="SUCCESS">/groupe/Groupe.jsp</result>
     </action>
     <!-- Evaluation croisé -->
     <action name="gotoEvaluationCroise" class="com.dev.actions.RedirectionsAction"
@@ -84,7 +87,10 @@
     </action>
     <!-- Profil -->
        <action name="gotoMonProfil" class="com.dev.actions.TuteurAction">
-    	<result name="success">/profil/ProfilEleve.jsp</result>
+    	<result name="success" type="chain">countAbsences</result>
+    </action>
+    <action name="countAbsences" class="com.dev.actions.AbscencesAction">
+    	<result name="SUCCESS">/profil/ProfilEleve.jsp</result>
     </action>
 	<!-- Attribution roles -->
     <action name="gotoRoles" class="com.dev.actions.RedirectionsAction" method="redirectionRoles">
@@ -111,10 +117,10 @@
     </action>
     <!-- Deadlines -->
     <action name="gotoDeadline" class="com.dev.actions.RedirectionsAction" method="redirectionDeadline">
-    	<result name="deadline" type="chain">displayDeadlines</result>
+    	<result name="deadline" type="chain">displayDeadlines2</result>
     </action>
-    <action name="displayDeadlines" class="com.dev.actions.DeadlinesAction">
-    	<result name="SUCCESS" type="chain">attributionGroupe</result>
+    <action name="displayDeadlines2" class="com.dev.actions.DeadlinesAction">
+    	<result name="SUCCESS" type="chain">attributionGroupe2</result>
     </action>
     <action name="addDeadlines" class="com.dev.actions.DeadlinesAction" method="add">
     	<result name="SUCCESS" type="chain">gotoDeadline</result>
@@ -122,16 +128,33 @@
     <action name="deleteDeadlines" class="com.dev.actions.DeadlinesAction" method="delete">
     	<result name="SUCCESS" type="chain">gotoDeadline</result>
     </action>
-    <action name="attributionGroupe" class="com.dev.actions.GroupesAction">
+    <action name="attributionGroupe2" class="com.dev.actions.GroupesAction">
     	<result name="SUCCESS">/deadline/GestionDeadline.jsp</result>
     </action>
     <!-- Rechercher élève -->
     <action name="gotoRecherche" class="com.dev.actions.RechercheEleveAction" method="execute">
     	<result name="success">/rechercherEleve/rechercherEleve.jsp</result>
     </action>
+    <!-- Rechercher élève responsable-->
+    <action name="goToRechercheRespo" class="com.dev.actions.Autocomplete">
+    	<result name="SUCCESS">/rechercherEleve/RechercherEleveRespo.jsp</result>
+    </action>
+    <action name="searchEleve2" class="com.dev.actions.RechercheEleveAction">
+    	<result name="SUCCESS">/rechercherEleve/FicheEleveRespo.jsp</result>
+    </action>
     <!-- Export notes -->
     <action name="gotoExportNotes" class="com.dev.actions.RedirectionsAction" method="redirectionExportNotes">
     	<result name="exportNotes">/accueil/AccueilAdmin.jsp</result>
+    </action>
+    <!-- Remarques -->
+    <action name="gotoRemarques" class="com.dev.actions.RedirectionsAction" method="redirectionRemarques">
+    	<result name="remarques" type="chain">attributionGroupeRemarques</result>
+    </action>
+    <action name="attributionGroupeRemarques" class="com.dev.actions.GroupesAction">
+    	<result name="SUCCESS">/groupe/Remarques.jsp</result>
+    </action>
+    <action name="addRemarques" class="com.dev.actions.RemarquesAction" method="add">
+    	<result name="SUCCESS" type="chain">gotoRemarques</result>
     </action>
     <!-- Rechercher élève -->
     <action name="gotoFicheEleve" class="com.dev.actions.RedirectionsAction" method="redirectionFicheEleve">

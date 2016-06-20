@@ -13,9 +13,8 @@
         <center><h1>Mon profil</h1></center> 
         <div class="row">
         	<div class="col-md-3">
-        		<center>Abscences</center>
-        		<center><div class="pie" style="animation-delay: -32s">32%</div></center></br>
-        		
+        		<center>Absences</center>
+        		<center><div class="pie" style="animation-delay: -<s:property value="pourcentage" />s"><s:property value="countAbscences" /><s:property value="pourcentage" />%</div></center></br>
         		
         		
         	</div>

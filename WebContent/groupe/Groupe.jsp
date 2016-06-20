@@ -33,7 +33,14 @@
         	
         	<div class="col-md-4 col-md-offset-1">
         		<center>Remarques sur le groupe</center>
-        		
+        		<table>
+				<s:iterator value="remarquesList" var="remarques">
+				    <tr>
+				       <td><s:property value="text_remarque"/></td>
+				    </tr> 
+				</s:iterator>
+				
+				</table>
         	</div>
         	
         	<div class="col-md-3 col-md-offset-1">
