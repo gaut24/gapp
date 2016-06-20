@@ -8,6 +8,7 @@ public class Releves_notes {
 	@Id
 	private int id_releve;
 	private int id_personne;
+	private int id_from;
 	private int id_competence;
 	private String resultat;
 	private String commentaire;
@@ -41,6 +42,12 @@ public class Releves_notes {
 	}
 	public void setCommentaire(String commentaire) {
 		this.commentaire = commentaire;
+	}
+	public int getId_from() {
+		return id_from;
+	}
+	public void setId_from(int id_from) {
+		this.id_from = id_from;
 	}
 	
 	

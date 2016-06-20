@@ -14,6 +14,7 @@ public class PersonneToGroupeAction extends ActionSupport {
 	private Personnes personnes;
     private List<String> personnesList;
     private List<Personnes> personnesList2;
+    private List personnesGroupes;
     private Long id;
     private String eleveNomToGroupe;
     private String eleveToGroupe;
@@ -27,8 +28,9 @@ public class PersonneToGroupeAction extends ActionSupport {
     public String execute() {
         this.personnesList = personnesToGroupeManager.list();
         this.personnesList2 = personnesToGroupeManager.list2();
+        this.personnesGroupes = personnesToGroupeManager.listGroupe();
         System.out.println("gr called");
-        System.out.println(personnesList2);
+        System.out.println(this.personnesGroupes);
         return "SUCCESS";
     }
  
@@ -88,5 +90,13 @@ public class PersonneToGroupeAction extends ActionSupport {
 
 	public void setEleveToGroupe(String eleveToGroupe) {
 		this.eleveToGroupe = eleveToGroupe;
+	}
+
+	public List getPersonnesGroupes() {
+		return personnesGroupes;
+	}
+
+	public void setPersonnesGroupes(List personnesGroupes) {
+		this.personnesGroupes = personnesGroupes;
 	}
 }

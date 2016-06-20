@@ -15,7 +15,7 @@ public class FamilleCompetenceManager extends HibernateUtil {
 		        session.beginTransaction();
 		        List l1 = null ;
 		        try {
-		        	Query q = session.createQuery("SELECT  F.nom as nom_famille, C.nom as nom_competence  FROM  Familles F, Competences C WHERE F.id_famille = C.id_famille");
+		        	Query q = session.createQuery("SELECT  F.nom as nom_famille, C.nom as nom_competence, C.id_competence, C.coefficient  FROM  Familles F, Competences C WHERE F.id_famille = C.id_famille");
 		        	l1 = q.list();
 		        } catch (HibernateException e) {
 		            e.printStackTrace();
@@ -29,7 +29,7 @@ public class FamilleCompetenceManager extends HibernateUtil {
 		        session.beginTransaction();
 		        List l1 = null ;
 		        try {
-		        	Query q = session.createQuery("SELECT  nom FROM  Familles");
+		        	Query q = session.createQuery("SELECT  nom, id_famille FROM  Familles");
 		        	l1 = q.list();
 		        } catch (HibernateException e) {
 		            e.printStackTrace();

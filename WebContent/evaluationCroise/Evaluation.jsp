@@ -23,9 +23,9 @@
 		        </thead>
 		        <tbody>
 		        	<c:forEach var="nomFamille" items="${FamilleList}">
-		        	<tr><th>${nomFamille}</th></tr>
+		        	<tr><th>${nomFamille[0]}</th></tr>
 		            <c:forEach var="nomCompetence" items="${FamilleCompetenceList}">
-		            <c:if test="${nomCompetence[0] == nomFamille}">
+		            <c:if test="${nomCompetence[0] == nomFamille[0]}">
 		            <tr>
 		                <td>${nomCompetence[1]}</td>
 		                <td> <INPUT type="radio" name="${nomCompetence[1]}" value="loin"> </td>

@@ -1,4 +1,5 @@
  <%@ include file="/imports/importsCss.jsp" %>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <title>Gestion des compétences</title>
 </head>
 <body>
@@ -19,8 +20,8 @@
 		</s:form>
          <h2>Ajouter une compétence</h2>
          <s:form  action="addCompetences">
-         <label>Famille</label>
-         	<select name="competences.id_famille">
+         <label style="margin-left: 1%;">Famille:</label>
+         	<select name="competences.id_famille" style="margin-left: 5%;">
          		<s:iterator value="famillesList" var="familles">
          			<option value="<s:property value="id_famille"/>"><s:property value="nom"/></option>
          	</s:iterator>
@@ -33,20 +34,33 @@
 			</s:textfield>
 			<s:submit value="Ajouter"></s:submit>
 		</s:form>
-         <h2>Grille de compétences</h2>
-<table>
-<tr>
-    <th>Famille</th>
-    <th>Supprimer</th>
-</tr>
-<s:iterator value="famillesList" var="familles">
-    <tr>
-        <td><s:property value="nom"/></td>
-        <td></td>
-        <td><a href="deleteFamille?id=<s:property value="id_famille"/>">x</a></td>
-    </tr> 
-</s:iterator>
-</table>
+			<table class="table responsive" style="background-color: #e9ebee;">
+				<thead>
+		            <tr>
+		                <th>Grille de compétences</th>
+		                <th>Coefficient</th>
+		                <th>Supprimer</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		        	<c:forEach var="nomFamille" items="${FamilleList}">
+		        	<tr>
+		        	<th>${nomFamille[0]}</th>
+		        	<th></th>
+		        	<th><a href="deleteFamille?id=${nomFamille[1]}">x</a></th>
+		        	</tr>
+		            <c:forEach var="nomCompetence" items="${FamilleCompetenceList}">
+		            <c:if test="${nomCompetence[0] == nomFamille[0]}">
+		            <tr>
+		                <td style="padding-left: 4%;">${nomCompetence[1]}</td>
+		                <td>${nomCompetence[3]}</td>
+		                <td><a href="deleteCompetence?id=${nomCompetence[2]}">x</a></td>
+		            </tr>
+		            </c:if>
+		            </c:forEach>
+		            </c:forEach>
+		        </tbody>
+		    </table>
        
 </div>
 

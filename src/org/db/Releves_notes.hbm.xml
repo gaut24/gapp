@@ -11,6 +11,9 @@
         <property name="id_personne" type="int">
             <column name="ID_PERSONNE" />
         </property>
+        <property name="id_from" type="int">
+            <column name="ID_FROM" />
+        </property>
         <property name="id_competence" type="int">
             <column name="ID_COMPETENCE" />
         </property>

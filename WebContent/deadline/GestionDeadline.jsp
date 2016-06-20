@@ -13,8 +13,8 @@
          <h2>Nouvelle date de remise de livrable</h2>
          
          <s:form  action="addDeadlines">
-         	<label>Date</label>
-			<input type="date" name="deadlines.date_deadline">
+         	<label>Date:</label>
+			<input type="date" name="deadlines.date_deadline" style="margin-left: 4%;">
 			<p>Concerne les groupes</p>
 			<input id="checkAll" type="checkbox" />Tout cocher
 			<div id="checkTest">
@@ -27,7 +27,7 @@
 			<s:submit value="Ajouter"></s:submit>
 		</s:form>
 		 <h2>Deadlines</h2>
-			<table style="width:100%;">
+			<table style="width:100%; background-color: #e9ebee;">
 			<tr>
 			    <th>Libellé</th>
 			    <th>Groupes</th>

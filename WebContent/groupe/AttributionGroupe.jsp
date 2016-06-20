@@ -1,6 +1,6 @@
 <%@ include file="/imports/importsCss.jsp"%>
-
-<title>AttributionGroupes</title>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<title>Attribution Groupes</title>
 </head>
 <body>
 	<div class="container">
@@ -13,20 +13,26 @@
 			<h2>Attribution Elèves</h2>
 			<s:form action="assignEleveToGroupe">
 		<sx:autocompleter size="1" list="personnes" listKey="nom" listValue="nom+', '+prenom" name="eleveNomToGroupe" showDownArrow="true" label="Nom de l'élève" autoComplete="true"></sx:autocompleter>
-		<s:select name="eleveToGroupe" list="groupesList" label="Nom du groupe"></s:select>
+		<s:select name="eleveToGroupe" list="groupesList" label="Nom du groupe" style="margin-top:6%;"></s:select>
 		<s:submit value="Valider"></s:submit>
 		</s:form>
 		<h2>Groupes</h2>
-		<s:iterator value="groupesList2" var="groupes">
-		<table>
-			<tr>
-        		<th name=""><s:property value="num_groupe"/></th>
-			</tr>
-		</table>
-		</s:iterator>
-		<s:iterator value="personnesList2" var="personnes">
-			<s:property value="prenom"/>
-		</s:iterator>
+		<table class="table responsive" style="background-color: #e9ebee;">
+		        <tbody>
+		        	<c:forEach var="groupes" items="${groupesList}">
+		        	<tr>
+		        	<th>${groupes}</th>
+		        	</tr>
+		 		<c:forEach var="personnesGroupesIn" items="${personnesGroupes}">
+		            <c:if test="${personnesGroupesIn[2] == groupes}">
+		            <tr>
+		                <td>${personnesGroupesIn[0]} ${personnesGroupesIn[1]}</td>
+		            </tr>
+		            </c:if>
+		            </c:forEach>
+		            </c:forEach>
+		        </tbody>
+		    </table>
 	</div>
 		<%@ include file="/HeaderEtFooter/footer.jsp"%>
 		<%@ include file="/imports/importsJs.jsp"%>

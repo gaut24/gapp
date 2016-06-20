@@ -74,12 +74,18 @@
     </action>
     <!-- Compétences -->
     <action name="gotoCompetences" class="com.dev.actions.FamilleAction">
+    	<result name="success" type="chain">displayFamillesCompetences</result>
+    </action>
+    <action name="displayFamillesCompetences" class="com.dev.actions.FamilleCompetenceAction">
     	<result name="success">/competences/gestion.jsp</result>
     </action>
     <action name="addFamille" class="com.dev.actions.FamilleAction" method="add">
-            <result name="success">/competences/gestion.jsp</result>
+            <result name="success" type="chain">gotoCompetences</result>
         </action>
     <action name="deleteFamille" class="com.dev.actions.FamilleAction" method="delete">
+            <result name="success" type="chain">gotoCompetences</result>
+    </action>
+    <action name="deleteCompetence" class="com.dev.actions.CompetenceAction" method="delete">
             <result name="success" type="chain">gotoCompetences</result>
     </action>
     <action name="addCompetences" class="com.dev.actions.CompetenceAction" method="add">
@@ -107,6 +113,9 @@
     	<result name="SUCCESS" type="chain">attributionGroupe</result>
     </action>
     <action name="attributionGroupe" class="com.dev.actions.GroupesAction">
+    	<result name="SUCCESS" type="chain">personnesInGroupes</result>
+    </action>
+    <action name="personnesInGroupes" class="com.dev.actions.PersonneToGroupeAction">
     	<result name="SUCCESS" type="chain">getEleveToGroupe</result>
     </action>
     <action name="getEleveToGroupe" class="com.dev.actions.PersonneToGroupeAction" method="execute">

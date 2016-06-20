@@ -55,4 +55,20 @@ public class PersonnesToGroupeManager extends HibernateUtil {
         session.getTransaction().commit();
         return personnesToGroupe;
     }
+		public List listGroupe() {
+		        
+		        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		        session.beginTransaction();
+		        List personnesToGroupe = null;
+		        try {
+		             
+		        	personnesToGroupe = session.createQuery("select nom, prenom, id_groupe from Personnes where droit=1").list();
+		             
+		        } catch (HibernateException e) {
+		            e.printStackTrace();
+		            session.getTransaction().rollback();
+		        }
+		        session.getTransaction().commit();
+		        return personnesToGroupe;
+		    }
 }
