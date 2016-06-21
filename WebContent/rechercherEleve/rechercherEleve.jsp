@@ -13,7 +13,7 @@
 <div class=" accelev col-lg-10 col-sm-10 col-md-10">
         
          <h1>Rechercher un élève</h1>
-         
+       
         <s:form  action="searchEleve">
        <sx:autocompleter size="1" list="personnes" listKey="nom" listValue="nom+', '+prenom" name="eleveNom" showDownArrow="false" label="Nom de l'élève" autoComplete="true"></sx:autocompleter>
        <s:submit value="Envoyer"></s:submit>

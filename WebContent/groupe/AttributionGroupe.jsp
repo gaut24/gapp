@@ -11,11 +11,22 @@
 		<div class=" accelev col-lg-10 col-sm-10 col-md-10">
 			<h1>Attribution des groupes</h1>
 			<h2>Attribution Elèves</h2>
-			<s:form action="assignEleveToGroupe">
-		<sx:autocompleter size="1" list="personnes" listKey="nom" listValue="nom+', '+prenom" name="eleveNomToGroupe" showDownArrow="true" label="Nom de l'élève" autoComplete="true"></sx:autocompleter>
-		<s:select name="eleveToGroupe" list="groupesList" label="Nom du groupe" style="margin-top:6%;"></s:select>
-		<s:submit value="Valider"></s:submit>
-		</s:form>
+		<div class="row">
+			   <div class="col-md-12">
+					<s:form theme="simple" action="assignEleveToGroupe">
+				
+				 		<div class="col-md-4 ">
+							<sx:autocompleter size="1" list="personnes" listKey="nom" listValue="nom+', '+prenom" name="eleveNomToGroupe" showDownArrow="true" label="Nom de l'élève" autoComplete="true"></sx:autocompleter>
+						</div>
+					 	<div class="col-md-4 ">		
+							<label>Nom du groupe : </label> <s:select name="eleveToGroupe" list="groupesList"  style="margin-top:4%;"></s:select>
+					    </div>
+					    <div class="col-md-4 ">		
+							<s:submit value="Valider"></s:submit>
+						</div>	
+					</s:form>
+				</div>
+		</div>
 		<h2>Groupes</h2>
 		<table class="table responsive" style="background-color: #e9ebee;">
 		        <tbody>

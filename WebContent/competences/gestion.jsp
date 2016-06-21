@@ -10,30 +10,38 @@
 <div class=" accelev col-lg-10 col-sm-10 col-md-10">
         
          <h1>Gestion des compétences</h1>
-         
+         </br>
          <h2>Ajouter une famille de compétences</h2>
-         <s:form  action="addFamille">
-         <s:textfield name="familles.nom" id="ajoutFamille"
-				label="Nouvelle famille" labelposition="left" size="20" maxlength="60">
-			</s:textfield>
-			<s:submit value="Ajouter"></s:submit>
-		</s:form>
-         <h2>Ajouter une compétence</h2>
-         <s:form  action="addCompetences">
-         <label style="margin-left: 1%;">Famille:</label>
-         	<select name="competences.id_famille" style="margin-left: 5%;">
-         		<s:iterator value="famillesList" var="familles">
-         			<option value="<s:property value="id_famille"/>"><s:property value="nom"/></option>
-         	</s:iterator>
-         </select>
-	         <s:textfield name="competences.nom" id="ajoutCompetences"
-					label="Nouvelle compétence" labelposition="left" size="20" maxlength="60">
-			</s:textfield>
-			<s:textfield name="competences.coefficient" id="ajoutCoef"
-				label="Coefficient" labelposition="left" size="20" maxlength="60">
-			</s:textfield>
-			<s:submit value="Ajouter"></s:submit>
-		</s:form>
+         
+         <div class="champ_form">
+		         <s:form  id ="addFamille" action="addFamille">
+		       
+			         <s:textfield name="familles.nom" id="ajoutFamille"
+							label="Nouvelle famille" labelposition="left" size="20" maxlength="60">
+						</s:textfield>
+						<s:submit value="Ajouter"></s:submit>
+				
+				</s:form>
+				</br>
+		         <h2>Ajouter une compétence</h2>
+		         
+		        <s:form  action="addCompetences">
+		         <label style="margin-left: 22%;">Famille:</label>
+		         	<select name="competences.id_famille" style="margin-left: 2%;">
+		         		<s:iterator value="famillesList" var="familles">
+		         			<option value="<s:property value="id_famille"/>"><s:property value="nom"/></option>
+		         	</s:iterator>
+		         </select>
+			         <s:textfield name="competences.nom" id="ajoutCompetences"
+							label="Nouvelle compétence" labelposition="left" size="20" maxlength="60">
+					</s:textfield>
+					<s:textfield name="competences.coefficient" id="ajoutCoef"
+						label="Coefficient" labelposition="left" size="20" maxlength="60">
+					</s:textfield>
+					<s:submit value="Ajouter"></s:submit>
+			</s:form>
+		</div>
+		
 			<table class="table responsive" style="background-color: #e9ebee;">
 				<thead>
 		            <tr>
