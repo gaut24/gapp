@@ -56,6 +56,9 @@
     <action name="evalProf" class="com.dev.actions.FamilleCompetenceAction">
     	<result name="success">/evaluationCroise/Evaluation.jsp</result>
     </action>
+    <action name="notation" class="com.dev.actions.NotesAction" method="add">
+    	<result name="success">/evaluationCroise/evaluationOK.jsp</result>
+    </action>
     <!-- Groupe -->
     <action name="gotoGroupe" class="com.dev.actions.RedirectionsAction"
       method="redirectionGroupe">

@@ -49,6 +49,13 @@ public class Releves_notes {
 	public void setId_from(int id_from) {
 		this.id_from = id_from;
 	}
-	
+	public Releves_notes() {}
+	public Releves_notes(int id_personnes, int id_from, int id_comp, String resultat, String commentaire) {
+	      this.id_personne = id_personnes;
+	      this.id_from = id_from;
+	      this.id_competence = id_comp;
+	      this.resultat = resultat;
+	      this.commentaire = commentaire;
+	   }
 	
 }
