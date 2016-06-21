@@ -93,7 +93,10 @@
     </action>
     <!-- Profil -->
        <action name="gotoMonProfil" class="com.dev.actions.TuteurAction">
-    	<result name="success" type="chain">countAbsences</result>
+    	<result name="SUCCESS" type="chain">getDeadlinesByGroup</result>
+    </action>
+    <action name="getDeadlinesByGroup" class="com.dev.actions.DeadlinesAction">
+    	<result name="SUCCESS" type="chain">countAbsences</result>
     </action>
     <action name="countAbsences" class="com.dev.actions.AbscencesAction">
     	<result name="SUCCESS">/profil/ProfilEleve.jsp</result>

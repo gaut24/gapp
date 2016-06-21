@@ -14,6 +14,7 @@ public class DeadlinesAction extends ActionSupport{
 	private static final long serialVersionUID = 1L;
 	private Deadlines deadlines;
     private List<Deadlines> deadlinesList;
+    private List<Deadlines> deadlinesByGroup;
     private int id;
  
     private DeadlinesManager deadlinesManager;
@@ -24,6 +25,8 @@ public class DeadlinesAction extends ActionSupport{
  
     public String execute() {
         this.deadlinesList = deadlinesManager.list();
+        this.deadlinesByGroup = deadlinesManager.getDeadlinesByGroup();
+        System.out.println(this.deadlinesByGroup);
         System.out.println("deadlines called");
         return "SUCCESS";
     }
@@ -49,6 +52,14 @@ public class DeadlinesAction extends ActionSupport{
  
     public Deadlines getDeadlines() {
         return deadlines;
+    }
+    
+    public List<Deadlines> getDeadlinesByGroup() {
+    	return deadlinesByGroup;
+    }
+    
+    public void setDeadlinesByGroup(List<Deadlines> deadlinesByGroup) {
+    	this.deadlinesByGroup = deadlinesByGroup;
     }
  
     public List<Deadlines> getDeadlinesList() {
