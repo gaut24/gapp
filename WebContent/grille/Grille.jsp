@@ -16,9 +16,7 @@
 		        <thead>
 		            <tr>
 		                <th>Compétences</th>
-		                <th>Loin</th>
-		                <th>Proche</th>
-		                <th>Acquis</th>
+		                <th>Evaluation</th>
 		                <th>Remarques</th>
 		            </tr>
 		        </thead>
@@ -27,21 +25,23 @@
 		        	<tr><th>${nomFamille[0]}</th></tr>
 		            <c:forEach var="nomCompetence" items="${FamilleCompetenceList}">
 		            <c:if test="${nomCompetence[0] == nomFamille[0]}">
-		            <tr>
+		            <tr id="${nomCompetence[2]}">
 		                <td>${nomCompetence[1]}</td>
-		                <td> <INPUT type="radio" name="${nomCompetence[1]}" value="loin"> </td>
-		                <td> <INPUT type="radio" name="${nomCompetence[1]}" value="proche"> </td>
-		                <td> <INPUT type="radio" name="${nomCompetence[1]}" value="acquis"> </td>
-		                <td> <input type="text" class="form-control" name="comment_${nomCompetence[1]}"> </td>
+		                <c:forEach var="note" items="${releves_notesList}">        
+		                <c:if test="${nomCompetence[2] == note[1]}">
+		                <td>${note[2]}</td>
+		                <td>${note[3]}</td>
+		                </c:if>
+		                </c:forEach>
+		                <td class="hidden"> <input type="text" class="hidden" name="id_personneNote" value="${nomCompetence[2]}"></td>
+		                
 		            </tr>
 		            </c:if>
 		            </c:forEach>
 		            </c:forEach>
+		 
 		        </tbody>
 		    </table>
-		    <form class="navbar-form navbar-right inline-form">
-		        <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-floppy-saved"></span> Sauvegarder</button>
-		    </form>
         </div>
 <%@ include file="/HeaderEtFooter/footer.jsp" %> 
 <%@ include file="/imports/importsJs.jsp" %>

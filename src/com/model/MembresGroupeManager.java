@@ -23,13 +23,13 @@ public class MembresGroupeManager  extends HibernateUtil {
 	 
 	 
 	 
-    public List<String> list(String id_groupe) {
+    public List<String> list(String id_groupe, int id) {
          
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         List<String> membres = null;
         try {
-        	membres = (List<String>)session.createQuery("from Personnes where id_groupe='"+id_groupe+"'").list();
+        	membres = (List<String>)session.createQuery("from Personnes where id_groupe='"+id_groupe+"' and id_personne!='"+id+"'").list();
              
         } catch (HibernateException e) {
             e.printStackTrace();

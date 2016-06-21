@@ -24,9 +24,10 @@ public class NotesAction extends ActionSupport{
  
     public String execute() {
         //this.releves_notesList = notesManager.list();
-    	System.out.println(getReleves_notes().getResultat());
         System.out.println("notes called");
-        return SUCCESS;
+        this.releves_notesList = notesManager.list((int)session.get("id"));
+        System.out.println(this.releves_notesList);
+        return "SUCCESS";
     }
  
     public String add() {
@@ -49,7 +50,7 @@ public class NotesAction extends ActionSupport{
         } catch (Exception e) {
             e.printStackTrace();
         }
-        this.releves_notesList = notesManager.list();
+        //this.releves_notesList = notesManager.list();
         return SUCCESS;
     }
  

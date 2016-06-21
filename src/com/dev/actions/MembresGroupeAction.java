@@ -31,7 +31,7 @@ public class MembresGroupeAction extends ActionSupport {
     }
  
     public String execute() {
-        this.membresList = membresManager.list(session.get("groupe").toString());
+        this.membresList = membresManager.list(session.get("groupe").toString(), (int)session.get("id"));
         System.out.println("membre called");
         return SUCCESS;
     }

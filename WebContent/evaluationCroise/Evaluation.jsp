@@ -17,7 +17,7 @@
 		        <thead>
 		            <tr>
 		                <th>Compétences</th>
-		                <th>Non vu</th>
+		                <th>Neutre</th>
 		                <th>Loin</th>
 		                <th>Proche</th>
 		                <th>Acquis</th>
@@ -31,7 +31,7 @@
 		            <c:if test="${nomCompetence[0] == nomFamille[0]}">
 		            <tr id="${nomCompetence[2]}">
 		                <td>${nomCompetence[1]}</td>
-		                <td> <input type="checkbox" class="${nomCompetence[2]}" name="releves_notes.resultat" value="non vu" checked="true" onclick="CheckRadio(this);"> </td>
+		                <td> <input type="checkbox" class="${nomCompetence[2]}" name="releves_notes.resultat" value="neutre" checked="true" onclick="CheckRadio(this);"> </td>
 		                <td> <input type="checkbox" class="${nomCompetence[2]}" name="releves_notes.resultat" value="loin" onclick="CheckRadio(this);"> </td>
 		                <td> <input type="checkbox" class="${nomCompetence[2]}" name="releves_notes.resultat" value="proche" onclick="CheckRadio(this);"> </td>
 		                <td> <input type="checkbox" class="${nomCompetence[2]}" name="releves_notes.resultat" value="acquis" onclick="CheckRadio(this);"> </td>

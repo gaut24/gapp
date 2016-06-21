@@ -35,7 +35,10 @@
     <!-- Grille -->
     <action name="gotoGrilleComp" class="com.dev.actions.RedirectionsAction"
       method="redirectionGrille">
-    	<result name="grille" type="chain">grille</result>
+    	<result name="grille" type="chain">displayNotes</result>
+    </action>
+    <action name="displayNotes" class="com.dev.actions.NotesAction">
+    	<result name="SUCCESS" type="chain">grille</result>
     </action>
     <action name="grille" class="com.dev.actions.FamilleCompetenceAction">
     	<result name="success">/grille/Grille.jsp</result>
@@ -47,6 +50,9 @@
     </action>
     <action name="eval" class="com.dev.actions.FamilleCompetenceAction">
     	<result name="success">/evaluationCroise/EvaluationCroise.jsp</result>
+    </action>
+    <action name="notationCroise" class="com.dev.actions.NotesAction" method="add">
+    	<result name="success">/evaluationCroise/evaluationCroiseOK.jsp</result>
     </action>
     <!-- Evaluation-->
     <action name="evaluation" class="com.dev.actions.RedirectionsAction"

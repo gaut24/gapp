@@ -37,7 +37,7 @@
 		            <s:select name="groupes.num_groupe" list="groupesList" label="Nom du groupe" style="margin-top:6%;"></s:select>
 		            <s:submit value="Valider"></s:submit>
 		        </s:form>
-		        <h2>Groupes</h2>
+		        <h2>Tuteurs</h2>
 		        <table class="table responsive" style="background-color: #e9ebee;">
 		            <tbody>
 		                <c:forEach var="groupes" items="${groupesList3}">
