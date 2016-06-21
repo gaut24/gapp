@@ -13,6 +13,7 @@ html, body{
      font-family: "helvetica";
      color: black;
 }
+
 .css_jour_evenement span { background: none !important; background-color: #FF0000 !important; color: blue !important; }
 #formulaire{
     background-color: white;
@@ -92,11 +93,14 @@ font-size: 11px;
 	width: 100px;
 	height: 100px;
 	border-radius:50%;
-	background:yellowgreen;
-	background-image: linear-gradient(to right, transparent 50%, #655 0);
+	background:#84aad8;
+	background-image: linear-gradient(to right, transparent 50%, #d9534f 0);
 	
 }
 
+#pres_eleve label{
+	color: blue;
+}
 
 @keyframes spin {
 	to { transform:
@@ -156,10 +160,12 @@ font-size: 11px;
   .container {
     width: 1170px;
   }
-}
+
+
+
 
 /* style de tous les boutons submit */
-#login_0, #searchEleve_0, #addFamille_0, #addCompetences_0, #addlivrable_0, #assignEleveToGroupe_0, #addDeadlines_0
+#login_0, #searchEleve_0, #addFamille_0,#valider_btn_roles,#addRemarques_0, #addCompetences_0, #addlivrable_0,#searchEleve2_0, #assignEleveToGroupe_0, #addDeadlines_0
 {
 	margin-top: 2px;
 	background: #84aad8;
@@ -167,4 +173,68 @@ font-size: 11px;
     color: white;
     border-radius: 5px;
     font-weight: bold;
+    width: 85px;
+    height: 38px;
 }
+#searchEleve2 {
+    margin-top: 5%;
+}
+#searchEleve2 input{
+	margin-bottom :10px;
+	border-radius: 5px;
+	border: 1px black solid;
+}
+
+
+#searchEleve2 label{
+	padding-top:10px;
+	line-height: 3 !important; 
+}
+
+ input {
+	border-radius : 5px; 
+	border: 1px black solid;
+}
+.champ_form form {
+	width:50%;
+}
+.champ_form {
+	margin-bottom: 5%;
+}
+.champ_form #addFamille{
+	padding-left: 4%;
+}
+.table {
+	border-radius : 5px;
+}
+.table th, .table td {
+    text-align: center;
+    width: 33.333%;
+}
+.champ_form table {
+	text-align:right;
+}
+#addCompetences label{
+
+}
+.ttd {
+	width: 33%; 
+	padding-right: 5%;
+	}
+	
+.ttd input {
+	float : right;
+}
+.ttd label, .ttd input{
+display: inline-block;
+}
+input[type="checkbox"], input[type="radio"] {
+    line-height: normal;
+    margin: 4px 5px 0;
+}
+
+#rq_textaera{
+	border-radius : 5px;
+	border: 1px black solid;
+}
+

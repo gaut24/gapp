@@ -10,7 +10,7 @@
 
 		<div class=" accelev col-lg-10 col-sm-10 col-md-10">
 			<h1>Remarques</h1>
-			<s:form  action="addRemarques">
+			<s:form  theme="simple" action="addRemarques">
 			<p>Concerne les groupes</p>
 			<input id="checkAll2" type="checkbox" />Tout cocher
 			<div id="checkTest2">
@@ -19,7 +19,7 @@
 			</s:iterator>
 			</div>
 			<p>Remarque :</p>
-			<textarea name="remarques.text_remarque" style="width:100%;margin-bottom: 2%;"></textarea>
+			<textarea id="rq_textaera" name="remarques.text_remarque" style="width:100%;margin-bottom: 2%;"></textarea>
 			<s:submit value="Ajouter"></s:submit>
 		</s:form>
 	</div>
