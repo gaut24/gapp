@@ -159,7 +159,7 @@ font-size: 11px;
 }
 
 /* style de tous les boutons submit */
-#login_0, #searchEleve_0, #addFamille_0, #addCompetences_0, #addlivrable_0, #assignEleveToGroupe_0, #addDeadlines_0
+#login_0, #searchEleve_0, #addFamille_0, #addCompetences_0, #addlivrable_0, #assignEleveToGroupe_0, #assignTuteurToGroupe_0, #addDeadlines_0
 {
 	margin-top: 2px;
 	background: #84aad8;

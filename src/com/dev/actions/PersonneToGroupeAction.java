@@ -15,9 +15,13 @@ public class PersonneToGroupeAction extends ActionSupport {
     private List<String> personnesList;
     private List<Personnes> personnesList2;
     private List personnesGroupes;
-    private Long id;
+    private List tuteursGroupes;
+    
+
+	private Long id;
     private String eleveNomToGroupe;
     private String eleveToGroupe;
+    
  
     private PersonnesToGroupeManager personnesToGroupeManager;
  
@@ -28,6 +32,7 @@ public class PersonneToGroupeAction extends ActionSupport {
     public String execute() {
         this.personnesList = personnesToGroupeManager.list();
         this.personnesList2 = personnesToGroupeManager.list2();
+        this.tuteursGroupes = personnesToGroupeManager.listGroupe2();
         this.personnesGroupes = personnesToGroupeManager.listGroupe();
         System.out.println("gr called");
         System.out.println(this.personnesGroupes);
@@ -91,7 +96,13 @@ public class PersonneToGroupeAction extends ActionSupport {
 	public void setEleveToGroupe(String eleveToGroupe) {
 		this.eleveToGroupe = eleveToGroupe;
 	}
+	public List getTuteursGroupes() {
+		return tuteursGroupes;
+	}
 
+	public void setTuteursGroupes(List tuteursGroupes) {
+		this.tuteursGroupes = tuteursGroupes;
+	}
 	public List getPersonnesGroupes() {
 		return personnesGroupes;
 	}
