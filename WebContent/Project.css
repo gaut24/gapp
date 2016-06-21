@@ -4,6 +4,8 @@ html, body{
      background-color: #e9ebee;
 }
 
+.highlight a { background: red; }
+
 .container{
     width:90%%;
     height:100%;

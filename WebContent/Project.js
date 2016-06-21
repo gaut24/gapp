@@ -49,9 +49,17 @@ $(document).ready(function(){
      		weekHeader: 'Sem.',
      		dateFormat: 'yy-mm-dd',
      		minDate: 0,
-             beforeShowDay: creerCalendrier
-         });    
+             beforeShowDay: highlightDays
+         })    
      });
+     
+     function highlightDays(date) {
+		 for (var i = 0; i < deadlines.length; i++) {
+			 if (new Date(deadlines[i].date).toString() == date.toString()) { 
+				 return [true, 'highlight', deadlines[i].detail];
+			 }
+	     }
+	 }
       /*
 	
 	$('.pie').forEach(function(pie) {

@@ -10,7 +10,15 @@
          
         
         <div class=" accelev col-sm-10 col-md-10">
-        
+        <div id="deadlines" style="display: none;">[
+			<c:forEach var="deadlinesByGroup" items="${deadlinesByGroup}" varStatus="loop">
+		    	{"date" : "${deadlinesByGroup[0]}", "detail" : "${deadlinesByGroup[1]}"}<c:if test="${!loop.last}">,</c:if>
+			</c:forEach>
+		]</div>
+		<script type="text/javascript">
+			var deadlines = eval(document.getElementById('deadlines').innerHTML);
+		</script>
+		
         <center><h1>Mon profil</h1></center> 
         <div class="row">
         	<div class="col-md-3">
@@ -23,24 +31,7 @@
         	<div class="col-md-4 col-md-offset-1">
         		<center>Cours</br>
         		<div id="datepicker"></div>
-        		<table style="border: 1px solid black; width:100%;">
-        		<tr>
-        		<td><b>Date</b></td>
-				<td><b>Deadline</b></td>
-				</tr>
-        			<c:forEach var="deadlinesByGroup" items="${deadlinesByGroup}">
-        			<tr>
-					<td>
-					${deadlinesByGroup[0]}
-					</td>
-					<td>
-					${deadlinesByGroup[1]}
-					</td>
-					<td>
-					</td>
-					</tr>
-					</c:forEach>
-				</table>
+				
         	</div>
 
 
