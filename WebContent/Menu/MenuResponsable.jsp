@@ -3,7 +3,7 @@
    
      <nav>
             
-    <s:url id="" action="" />
+   <!--   <s:url id="" action="" />-->
     <s:url id="urlDeadlines" action="gotoDeadline" />
     <s:url id="urlattributionGroupe" action="gotoAttributionGroupe" />
     <s:url id="urlRoles" action="gotoRoles" />

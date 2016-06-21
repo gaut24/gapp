@@ -12,16 +12,17 @@
          
          <h2>Nouvelle date de remise de livrable</h2>
          
-         <s:form  action="addlivrable">
-         	<label>Date</label>
+         <s:form  action="addDeadlines">
+         <!-- 	<label>Date</label>
 			<input type="date" name="date">
 			<p>Concerne les groupes</p>
-			<INPUT type="checkbox" name="choixGroupe" value="1">G1A
-			<INPUT type="checkbox" name="choixGroupe" value="1">G1B
-			<INPUT type="checkbox" name="choixGroupe" value="1">G2A
-			<INPUT type="checkbox" name="choixGroupe" value="1">G2B
+			<INPUT type="checkbox" name="choixGroupe" value="G1A">G1A
+			<INPUT type="checkbox" name="choixGroupe" value="G1B">G1B
+			<INPUT type="checkbox" name="choixGroupe" value="G2A">G2A
+			<INPUT type="checkbox" name="choixGroupe" value="G2B">G2B -->
 			<p>Description :</p>
-			<input type="text" name="description">
+			<s:textfield name="deadlines.nom" id="ajoutDeadlines">
+			</s:textfield>
 			<s:submit value="Ajouter"></s:submit>
 		</s:form>
 		

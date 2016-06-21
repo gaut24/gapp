@@ -39,6 +39,7 @@ public class LoginAction implements Action, ModelDriven<Personnes>, ServletConte
             int droit = personnesDB.getDroit();
             if(droit == 1) return "SUCCESSeleve";
             else if (droit == 2) return "SUCCESSprof";
+            else if (droit == 3) return "SUCCESSrespo";
             else return "SUCCESSadmin";
             
         }

@@ -20,6 +20,7 @@
         <result name="SUCCESSeleve" >/accueil/AccueilEleve.jsp</result>
         <result name="SUCCESSprof" >/accueil/AccueilProfesseur.jsp</result>
         <result name="SUCCESSadmin" >/accueil/AccueilAdmin.jsp</result>
+         <result name="SUCCESSrespo" >/accueil/AccueilResponsable.jsp</result>
         <result name="INPUT">/connexion/connexion.jsp</result>  
     </action>
     
@@ -83,6 +84,10 @@
     </action>
     <action name="addCompetences" class="com.dev.actions.CompetenceAction" method="add">
             <result name="success">/competences/gestion.jsp</result>
+    </action>
+    
+    <action name="addDeadlines" class="com.dev.actions.DeadlinesAction" method="add">
+            <result name="success">/deadline/GestionDeadline.jsp</result>
     </action>
 </package>   
 	<include file="com/objis/demostruts2/example.xml" />
