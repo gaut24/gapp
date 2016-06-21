@@ -127,6 +127,9 @@
     <action name="assignEleveToGroupe" class="com.dev.actions.PersonneToGroupeAction" method="update">
     	<result name="SUCCESS" type="chain">gotoAttributionGroupe</result>
     </action>
+    <action name="assignTuteurToGroupe" class="com.dev.actions.GroupesAction" method="update">
+    	<result name="SUCCESS" type="chain">gotoAttributionGroupe</result>
+    </action>
     <!-- Deadlines -->
     <action name="gotoDeadline" class="com.dev.actions.RedirectionsAction" method="redirectionDeadline">
     	<result name="deadline" type="chain">displayDeadlines2</result>

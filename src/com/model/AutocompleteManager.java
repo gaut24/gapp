@@ -27,4 +27,21 @@ public class AutocompleteManager {
         session.getTransaction().commit();
         return personnes;
     }
+    public static List<String> list2() {
+        
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+        List<String> personnes = null;
+        try {
+             
+            personnes = (List<String>)session.createQuery("from Personnes where droit=2").list();
+            
+             
+        } catch (HibernateException e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
+        session.getTransaction().commit();
+        return personnes;
+    }
 }

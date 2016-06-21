@@ -13,6 +13,8 @@ public class GroupesAction extends ActionSupport{
 	private Groupes groupes;
     private List<String> groupesList;
     private List<String> groupesList2;
+    private List<String> groupesList3;
+    private List<String> tuteurList;
     private Long id;
  
     private GroupesManager groupesManager;
@@ -24,6 +26,7 @@ public class GroupesAction extends ActionSupport{
     public String execute() {
         this.groupesList = groupesManager.list();
         this.groupesList2 = groupesManager.list2();
+        this.groupesList3 = groupesManager.list3();
         System.out.println("groupe called");
         return "SUCCESS";
     }
@@ -37,6 +40,17 @@ public class GroupesAction extends ActionSupport{
         }
         this.groupesList = groupesManager.list();
         return SUCCESS;
+    }
+    
+    public String update() {
+        System.out.println();
+        try {
+        	groupesManager.update(getGroupes().getId_tuteur(), getGroupes().getNum_groupe());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        this.tuteurList = groupesManager.list();
+        return "SUCCESS";
     }
  
     public String delete() {
@@ -75,4 +89,12 @@ public class GroupesAction extends ActionSupport{
     public void setId(Long id) {
         this.id = id;
     }
+
+	public List<String> getGroupesList3() {
+		return groupesList3;
+	}
+
+	public void setGroupesList3(List<String> groupesList3) {
+		this.groupesList3 = groupesList3;
+	}
 }
