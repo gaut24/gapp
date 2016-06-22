@@ -39,7 +39,7 @@ public class NotesManager extends HibernateUtil{
         List<Releves_notes> releves_notes = null;
         try {
              
-        	releves_notes = (List<Releves_notes>)session.createQuery("select id_personne, id_competence, resultat, commentaire from Releves_notes where id_from=4 and id_personne='"+id+"'").list();
+        	releves_notes = (List<Releves_notes>)session.createQuery("select id_personne, id_competence, resultat, commentaire from Releves_notes where id_from=15 and id_personne='"+id+"'").list();
              
         } catch (HibernateException e) {
             e.printStackTrace();

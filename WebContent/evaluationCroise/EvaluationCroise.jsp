@@ -13,10 +13,10 @@
         <h1>Evaluation croisée</h1>
 		    <s:form action="notationCroise">
         <input type="text" name="releves_notes.id_personne" class="hidden" value='<%=request.getParameter("id")%>'/>
-		    <table class="table responsive" style="background-color: #e9ebee;">
+		    <table class="table2 responsive" style="background-color: #e9ebee;">
 		        <thead>
 		            <tr>
-		                <th>Compétences</th>
+		                <th style="text-align:left;padding-left:1%;">Compétences</th>
 		                <th>Neutre</th>
 		                <th>Loin</th>
 		                <th>Proche</th>
@@ -26,11 +26,11 @@
 		        </thead>
 		        <tbody>
 		        	<c:forEach var="nomFamille" items="${FamilleList}">
-		        	<tr><th>${nomFamille[0]}</th></tr>
+		        	<tr><th style="text-align:left;padding-left:1%;">${nomFamille[0]}</th></tr>
 		            <c:forEach var="nomCompetence" items="${FamilleCompetenceList}">
 		            <c:if test="${nomCompetence[0] == nomFamille[0]}">
 		            <tr id="${nomCompetence[2]}">
-		                <td>${nomCompetence[1]}</td>
+		                <td style="text-align:left;padding-left:3%;">${nomCompetence[1]}</td>
 		                <td> <input type="checkbox" class="${nomCompetence[2]}" name="releves_notes.resultat" value="neutre" checked="true" onclick="CheckRadio(this);"> </td>
 		                <td> <input type="checkbox" class="${nomCompetence[2]}" name="releves_notes.resultat" value="loin" onclick="CheckRadio(this);"> </td>
 		                <td> <input type="checkbox" class="${nomCompetence[2]}" name="releves_notes.resultat" value="proche" onclick="CheckRadio(this);"> </td>
@@ -43,7 +43,7 @@
 		            </c:forEach>
 		        </tbody>
 		    </table>
-		        <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-floppy-saved"></span> Sauvegarder</button>
+		        <button type="submit" class="btn btn-primary btn-sm btn_ev"><span class="glyphicon glyphicon-floppy-saved"></span> Sauvegarder</button>
 		    </s:form>
    
         
