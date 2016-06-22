@@ -13,7 +13,7 @@
         <h1>Evaluation</h1>
         <s:form action="notation">
         <input type="text" name="releves_notes.id_personne" class="hidden" value='<%=request.getParameter("id")%>'/>
-		    <table class="table responsive" style="background-color: #e9ebee;">
+		    <table class="table2 responsive" style="background-color: #e9ebee;">
 		        <thead>
 		            <tr>
 		                <th>Compétences</th>
@@ -43,7 +43,7 @@
 		            </c:forEach>
 		        </tbody>
 		    </table>
-		        <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-floppy-saved"></span> Sauvegarder</button>
+		        <button type="submit" class="btn_ev	btn btn-primary btn-sm"><span class="glyphicon glyphicon-floppy-saved"></span> Sauvegarder</button>
 		    </s:form>
    
         

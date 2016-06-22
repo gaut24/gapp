@@ -12,7 +12,7 @@
         <div class=" accelev col-sm-10 col-md-10">
         
          <h1>Grille de compétences</h1>
-		    <table class="table responsive" style="background-color: #e9ebee;">
+		    <table class="table2 responsive" style="background-color: #e9ebee;">
 		        <thead>
 		            <tr>
 		                <th>Compétences</th>

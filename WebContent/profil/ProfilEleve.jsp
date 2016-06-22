@@ -13,21 +13,21 @@
         <center><h1>Mon profil</h1></center> 
         <div class="row">
         	<div class="col-md-3">
-        		<center>Absences</center>
+        		<center><b>Absences</b></center>
         		<center><div class="pie" style="animation-delay: -<s:property value="pourcentage" />s"><s:property value="countAbscences" /><s:property value="pourcentage" />%</div></center></br>
         		
         		
         	</div>
         	
         	<div class="col-md-4 col-md-offset-1">
-        		<center>Cours</br>
+        		<center><b>Cours</b></br>
         		<div id="datepicker"></div>
         	</div>
         	</center>
         	<div class="col-md-3 col-md-offset-1">
         	<!--   List tuteurList = (List)session.getAttribute("listeClients");
 int i; %>-->
-        		<center>Tuteur</center>
+        		<center><b>Tuteur</b></center>
         		<center>
 			<s:property value="tuteurList[0]" /> <s:property value="tuteurList[0][1]" />
 				</center>	      

@@ -13,7 +13,7 @@
          <center><h1>Mon Groupe : <s:property value="#session.groupe"/></h1></center></br>
          <div class="row">
         	<div class="col-md-3 text-center">
-        		 		<center>Membres</center>
+        		 		<center><b>Membres</b></center>
         			<table>
 				
 	
@@ -32,7 +32,7 @@
         	</div>
         	
         	<div class="col-md-4 col-md-offset-1">
-        		<center>Remarques sur le groupe</center>
+        		<center><b>Remarques sur le groupe</b></center>
         		<table>
 				<s:iterator value="remarquesList" var="remarques">
 				    <tr>
@@ -44,7 +44,7 @@
         	</div>
         	
         	<div class="col-md-3 col-md-offset-1">
-        		<center>Évaluation croisée</center>
+        		<center><b>Évaluation croisée</b></center>
         		<table>
 				<s:iterator value="membresList" var="membres">
     <tr>

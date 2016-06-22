@@ -166,7 +166,7 @@ font-size: 11px;
 
 /* style de tous les boutons submit */
 
-#login_0, #searchEleve_0, #addFamille_0, #addCompetences_0, #addlivrable_0, #assignEleveToGroupe_0, #assignTuteurToGroupe_0, #addDeadlines_0
+#login_0,#addRemarques_0,#addAbscences_0, #searchEleve_0,#searchEleve2_0,#valider_btn_roles, #addFamille_0, #addCompetences_0, #addlivrable_0, #assignEleveToGroupe_0, #assignTuteurToGroupe_0, #addDeadlines_0
 {
 	margin-top: 2px;
 	background: #84aad8;
@@ -175,7 +175,7 @@ font-size: 11px;
     border-radius: 5px;
     font-weight: bold;
     width: 85px;
-    height: 38px;
+    height: 45px;
 }
 #searchEleve2 {
     margin-top: 5%;
@@ -238,4 +238,32 @@ input[type="checkbox"], input[type="radio"] {
 	border-radius : 5px;
 	border: 1px black solid;
 }
-
+#valider_btn_roles{
+	margin-bottom: 3%;
+}
+.tdLabel {
+   
+    vertical-align: middle !important;
+}
+#searchEleve_0{
+	margin-top: 10px;
+}
+.table_abs{
+	border: 1px solid black;
+	 width:100%;
+}
+.btn_ev	{
+	margin-bottom : 10px;
+	margin-top: 10px;
+}
+.table2{
+	width: 100%;
+	border-radius: 5px;
+}
+.table2 th, td{
+	text-align : center;
+	padding-right: 5px;
+}
+.table2 textarea {
+	margin-bottom: 10px;
+}
