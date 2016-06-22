@@ -1,4 +1,5 @@
 <%@ include file="/imports/importsCss.jsp" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <title>Mon Profil</title>
 </head>
 <body>
@@ -15,8 +16,6 @@
         	<div class="col-md-3">
         		<center>Absences</center>
         		<center><div class="pie" style="animation-delay: -<s:property value="pourcentage" />s"><s:property value="countAbscences" /><s:property value="pourcentage" />%</div></center></br>
-        		
-        		
         	</div>
         	
         	<div class="col-md-4 col-md-offset-1">
@@ -31,8 +30,24 @@ int i; %>-->
         		<center>
 			<s:property value="tuteurList[0]" /> <s:property value="tuteurList[0][1]" />
 				</center>	      
-					
-				
+			<div style="margin-top: 50px;">
+	        		<table style="width:100%;">
+						<tr>
+							<td><b>Deadline</b></td>
+							<td><b>Date</b></td>
+						</tr>
+	        		</table>
+        		</div>
+        		<div style="overflow-y : scroll; height : 200px;">
+        			<table style="width:100%;">
+		        		<c:forEach var="deadlinesByGroup" items="${deadlinesByGroup}">
+		        			<tr>
+		        				<td>${deadlinesByGroup[1]}</td>
+		        				<td>${deadlinesByGroup[0]}</td>
+		        			</tr>
+		        		</c:forEach>
+	        		</table>	
+        		</div>					
         	</div>
         </div>
         

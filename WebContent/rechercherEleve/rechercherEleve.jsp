@@ -15,11 +15,21 @@
          <h1>Rechercher un élève</h1>
        
         <s:form  action="searchEleve">
-       <sx:autocompleter size="1" list="personnes" listKey="nom" listValue="nom+', '+prenom" name="eleveNom" showDownArrow="false" label="Nom de l'élève" autoComplete="true"></sx:autocompleter>
+       <sx:autocompleter forceValidOption="true" size="1" list="personnes" listKey="nom" listValue="nom+', '+prenom" name="eleveNom" showDownArrow="false" label="Nom de l'élève" autoComplete="true"></sx:autocompleter>
        <s:submit value="Envoyer"></s:submit>
        </s:form>
        
 </div>
+<script type="text/javascript">
+$(document).ready(function() {
+	  $(window).keydown(function(event){
+	    if(event.keyCode == 13) {
+    	  event.preventDefault();
+	      return false;
+	    }
+	  });
+	});
+</script>
 <%@ include file="/HeaderEtFooter/footer.jsp" %>
  <%@ include file="/imports/importsJs.jsp" %>
  

@@ -25,7 +25,7 @@ public class TuteurAction {
     public String execute() {
         this.tuteurList = tuteurManager.list();
         System.out.println("execute called");
-        return "success";
+        return "SUCCESS";
     }
  
   
